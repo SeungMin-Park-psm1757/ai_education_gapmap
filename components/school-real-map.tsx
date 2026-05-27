@@ -168,8 +168,18 @@ export function SchoolRealMap({ points }: { points: RealMapPoint[] }) {
   const mapRef = useRef<LeafletMap | null>(null);
   const [error, setError] = useState<string | null>(null);
   const plottedPoints = useMemo(() => getPlottedPoints(points), [points]);
+  const schematicPoints = useMemo(
+    () =>
+      points.slice(0, 60).map((point, index) => ({
+        ...point,
+        left: 8 + ((index * 17) % 84),
+        top: 10 + ((index * 29) % 78)
+      })),
+    [points]
+  );
 
   useEffect(() => {
+    if (!plottedPoints.length) return;
     let mounted = true;
 
     loadLeaflet()
@@ -228,6 +238,38 @@ export function SchoolRealMap({ points }: { points: RealMapPoint[] }) {
       }
     };
   }, [plottedPoints]);
+
+  if (!plottedPoints.length && points.length) {
+    return (
+      <div className="relative h-[560px] min-h-[560px] w-full overflow-hidden bg-slate-50">
+        <div className="absolute inset-5 rounded-xl border border-slate-200 bg-white">
+          <div className="absolute left-4 top-4 rounded-md bg-slate-100 px-3 py-1 text-xs font-black text-slate-700">
+            익명화 권역 분포
+          </div>
+          <div className="absolute inset-0 opacity-80">
+            <div className="absolute left-1/3 top-0 h-full border-l border-dashed border-slate-200" />
+            <div className="absolute left-2/3 top-0 h-full border-l border-dashed border-slate-200" />
+            <div className="absolute left-0 top-1/3 w-full border-t border-dashed border-slate-200" />
+            <div className="absolute left-0 top-2/3 w-full border-t border-dashed border-slate-200" />
+          </div>
+          {schematicPoints.map((point) => (
+            <a
+              key={point.schoolId}
+              href={`/schools/${encodeURIComponent(point.schoolId)}`}
+              className="absolute flex h-8 w-8 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-2 border-white text-[10px] font-black text-white shadow-md"
+              style={{ left: `${point.left}%`, top: `${point.top}%`, background: point.color }}
+              title={`${point.schoolName} ${point.score}점`}
+            >
+              {point.score}
+            </a>
+          ))}
+          <div className="absolute bottom-4 left-4 right-4 rounded-lg bg-white/95 p-3 text-xs font-bold leading-5 text-slate-600 shadow-sm">
+            제출용 익명화 모드에서는 실제 좌표를 표시하지 않고 권역화된 분포로 대체합니다.
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="relative h-[560px] min-h-[560px] w-full overflow-hidden bg-slate-100">

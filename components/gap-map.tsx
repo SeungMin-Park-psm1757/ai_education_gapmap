@@ -2,6 +2,7 @@ import Link from "next/link";
 import { AlertTriangle, CheckCircle2, MapPinned, School2 } from "lucide-react";
 import { getLevelLabel, isFieldCheckFirst } from "@/lib/readiness-score";
 import { SchoolRealMap, type RealMapPoint } from "@/components/school-real-map";
+import { getRegionLabel, isAnonymizeMode } from "@/lib/anonymize";
 import type { DataManifest, ReadinessScore, SchoolProfile } from "@/lib/types";
 
 type MapItem = RealMapPoint & ReadinessScore & {
@@ -125,6 +126,8 @@ export function GapMap({
     { label: "일반 모니터링", count: scores.filter((score) => score.level === "high").length, dot: "bg-blue-600" },
     { label: "현장 확인 우선", count: fieldCheckCount, dot: "bg-slate-400" }
   ];
+  const regionLabel = getRegionLabel();
+  const anonymized = isAnonymizeMode();
 
   return (
     <div className="space-y-8">
@@ -151,11 +154,11 @@ export function GapMap({
             <div>
               <div className="inline-flex items-center gap-2 rounded-md bg-slate-100 px-3 py-1 text-xs font-bold text-slate-700">
                 <MapPinned className="h-4 w-4" aria-hidden="true" />
-                노원구 실제 지도
+                {anonymized ? "권역화 지도" : `${regionLabel} 실제 지도`}
               </div>
               <h2 className="mt-3 text-2xl font-black text-slate-950">지원 소요 분포</h2>
               <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">
-                점수가 높을수록 우수한 학교가 아니라, 공개자료상 지원이 먼저 필요한 신호가 크다는 뜻입니다.
+                점수가 높을수록 좋은 것이 아니라, 공개자료상 지원 필요 신호가 크다는 뜻입니다.
               </p>
             </div>
             <div className="grid grid-cols-2 gap-2 text-sm sm:grid-cols-4 lg:min-w-[430px]">
@@ -280,7 +283,7 @@ export function GapMap({
                 <div className="min-w-0">
                   <h3 className="truncate text-base font-black text-slate-950">{item.schoolName}</h3>
                   <p className="mt-1 text-sm leading-6 text-slate-600">
-                    {item.schoolLevel ?? "학교급 자료 없음"} · {item.address ?? "주소 자료 없음"}
+                    {item.schoolLevel ?? "학교급 자료 없음"} · {item.address ?? "권역 자료 없음"}
                   </p>
                   <div className="mt-2 flex flex-wrap gap-2">
                     {item.weakFactors.slice(0, 3).map((factor) => (

@@ -15,13 +15,26 @@ export function AdminActionCards({ score }: { score: ReadinessScore }) {
           공개자료 기반 1차 신호를 예산·연수·프로그램·현장 확인으로 연결합니다.
         </p>
       </div>
-      <div className="grid gap-4 md:grid-cols-4">
+      <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
         {actions.map((action) => (
           <div key={action.title} className="rounded-2xl border border-slate-200 bg-white p-5 shadow-soft">
             <span className="inline-flex rounded-md bg-slate-100 px-2.5 py-1 text-xs font-black text-slate-700">
               {action.title}
             </span>
-            <p className="mt-3 text-sm leading-6 text-slate-700">{action.description}</p>
+            <div className="mt-4 space-y-3 text-sm leading-6 text-slate-700">
+              <p>
+                <span className="font-black text-slate-950">왜 필요한가: </span>
+                {action.why}
+              </p>
+              <p>
+                <span className="font-black text-slate-950">무엇을 할 것인가: </span>
+                {action.action}
+              </p>
+              <p>
+                <span className="font-black text-slate-950">필요한 추가자료: </span>
+                {action.requiredData}
+              </p>
+            </div>
           </div>
         ))}
       </div>

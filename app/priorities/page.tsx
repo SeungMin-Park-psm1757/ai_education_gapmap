@@ -15,7 +15,7 @@ export default function PrioritiesPage() {
       <SectionHeader
         eyebrow="지원 우선순위"
         title="먼저 볼 학교와 다음 조치"
-        description="지원 소요 지수, 신뢰도, 대표 보강 영역을 행정 조치로 연결합니다."
+        description="점수가 높을수록 좋은 것이 아니라 지원 필요 신호가 큽니다. 신뢰도 C는 현장 확인 우선으로 분리합니다."
       />
       {!hasData ? <DataRequired /> : null}
       {hasData ? (
@@ -47,7 +47,11 @@ export default function PrioritiesPage() {
                     </p>
                     <p className="rounded-lg bg-slate-50 px-3 py-2 font-bold text-slate-700">{action.title}</p>
                   </div>
-                  <p className="mt-3 text-sm leading-6 text-slate-600">{action.description}</p>
+                  <div className="mt-3 space-y-1 text-sm leading-6 text-slate-600">
+                    <p><span className="font-black text-slate-800">왜: </span>{action.why}</p>
+                    <p><span className="font-black text-slate-800">조치: </span>{action.action}</p>
+                    <p><span className="font-black text-slate-800">추가자료: </span>{action.requiredData}</p>
+                  </div>
                   <span className="mt-4 inline-flex text-sm font-black text-blue-700">상세 보기</span>
                 </Link>
               );
@@ -58,7 +62,7 @@ export default function PrioritiesPage() {
             <section className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
               <h2 className="text-xl font-black text-slate-950">현장 확인 우선</h2>
               <p className="mt-2 text-sm leading-6 text-slate-600">
-                공개자료가 부족해 점수보다 현장 확인이 먼저 필요한 학교입니다.
+                공개자료가 부족해 점수보다 현장 확인이 먼저 필요한 학교입니다. 신뢰도는 학교 역량이 아니라 데이터 해석의 확실성입니다.
               </p>
               <div className="mt-4 grid gap-3 md:grid-cols-2">
                 {fieldCheckItems.map((score) => (
