@@ -1481,34 +1481,6 @@
     "clubCount": 40
   },
   {
-    "id": "7011144",
-    "name": "학력인정 청암고등학교(2년제)",
-    "level": "attention",
-    "score": 49,
-    "schoolScale": 17.4,
-    "teacherCondition": 9.2,
-    "digitalInfra": 12.5,
-    "aiProgram": 0,
-    "regionalSupport": 9.8,
-    "studentCount": 610,
-    "teacherCount": 37,
-    "classCount": 16
-  },
-  {
-    "id": "7011145",
-    "name": "학력인정 청암중학교(2년제)",
-    "level": "attention",
-    "score": 49,
-    "schoolScale": 17.4,
-    "teacherCondition": 9.2,
-    "digitalInfra": 12.5,
-    "aiProgram": 0,
-    "regionalSupport": 9.8,
-    "studentCount": 622,
-    "teacherCount": 37,
-    "classCount": 16
-  },
-  {
     "id": "7010252",
     "name": "한국삼육고등학교",
     "level": "high",

@@ -7,23 +7,5 @@
     "regionalSupportSignal": 60,
     "dataSourceNote": "외국교육기관 및 외국인학교 종합안내의 학교소개에서 학생 대 교사 비율 5:1, 최첨단 교육환경·시설, 동아시아어 교육 운영 설명을 보조 근거로 반영했습니다.",
     "publicSupplementSource": "외국교육기관 및 외국인학교 종합안내"
-  },
-  {
-    "schoolName": "학력인정 청암중학교(2년제)",
-    "studentCount": 622,
-    "classCount": 16,
-    "teacherCount": 37,
-    "regionalSupportSignal": 65,
-    "dataSourceNote": "국무조정실·교육부 보도자료의 서울시교육청 청암중·고등학교 현황에서 중학교 학생 622명, 학급 16개, 중·고 통합 교사 37명을 보조 근거로 반영했습니다.",
-    "publicSupplementSource": "국무조정실·교육부 보도자료"
-  },
-  {
-    "schoolName": "학력인정 청암고등학교(2년제)",
-    "studentCount": 610,
-    "classCount": 16,
-    "teacherCount": 37,
-    "regionalSupportSignal": 65,
-    "dataSourceNote": "국무조정실·교육부 보도자료의 서울시교육청 청암중·고등학교 현황에서 고등학교 학생 610명, 학급 16개, 중·고 통합 교사 37명을 보조 근거로 반영했습니다.",
-    "publicSupplementSource": "국무조정실·교육부 보도자료"
   }
 ]

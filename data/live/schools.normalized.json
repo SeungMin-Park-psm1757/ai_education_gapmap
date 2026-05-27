@@ -4062,36 +4062,6 @@
     "aiProgramSignal": 100
   },
   {
-    "id": "7011144",
-    "schoolName": "학력인정 청암고등학교(2년제)",
-    "address": "서울특별시 노원구 중계로 244",
-    "schoolLevel": "평생학교(고)-2년6학기",
-    "eduOffice": "서울특별시교육청",
-    "phone": "02-930-5646",
-    "homepage": "www.ca.hs.kr",
-    "studentCount": 610,
-    "teacherCount": 37,
-    "classCount": 16,
-    "regionalSupportSignal": 65,
-    "dataSourceNote": "국무조정실·교육부 보도자료의 서울시교육청 청암중·고등학교 현황에서 고등학교 학생 610명, 학급 16개, 중·고 통합 교사 37명을 보조 근거로 반영했습니다.",
-    "publicSupplementSource": "국무조정실·교육부 보도자료"
-  },
-  {
-    "id": "7011145",
-    "schoolName": "학력인정 청암중학교(2년제)",
-    "address": "서울특별시 노원구 중계로 244",
-    "schoolLevel": "평생학교(중)-2년6학기",
-    "eduOffice": "서울특별시교육청",
-    "phone": "02-930-6511",
-    "homepage": "http://ca.hs.kr",
-    "studentCount": 622,
-    "teacherCount": 37,
-    "classCount": 16,
-    "regionalSupportSignal": 65,
-    "dataSourceNote": "국무조정실·교육부 보도자료의 서울시교육청 청암중·고등학교 현황에서 중학교 학생 622명, 학급 16개, 중·고 통합 교사 37명을 보조 근거로 반영했습니다.",
-    "publicSupplementSource": "국무조정실·교육부 보도자료"
-  },
-  {
     "id": "7010252",
     "schoolName": "한국삼육고등학교",
     "address": "서울특별시 노원구 화랑로 815",

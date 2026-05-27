@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-05-24T09:06:16.399Z",
+  "generatedAt": "2026-05-27T08:04:37.008Z",
   "targetDistrict": "노원구",
   "counts": {
     "neisSchools": 100,
     "schoolLocationStandard": 93,
     "schoolInfo": 96,
-    "normalizedSchools": 100,
-    "readinessScores": 100
+    "normalizedSchools": 98,
+    "readinessScores": 98
   },
   "warnings": []
 }

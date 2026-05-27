@@ -12,6 +12,10 @@ const aiCenters = readJson(path.join(liveDir, "ai-centers.raw.json"), []);
 const camps = readJson(path.join(liveDir, "sw-ai-camps.raw.json"), []);
 const learningCenters = readJson(path.join(liveDir, "public-learning-centers.raw.json"), []);
 const publicSupplements = readJson(path.join(sourceDir, "public-supplements.json"), []);
+const excludedSchoolNames = new Set([
+  "학력인정 청암고등학교(2년제)",
+  "학력인정 청암중학교(2년제)"
+]);
 
 const byName = new Map();
 const locationByName = new Map(
@@ -229,7 +233,7 @@ function copyPublicSignals(target, source) {
 const baseSchools = [...byName.values()].map((school) => ({
   ...school,
   regionalSupportSignal: Math.max(school.regionalSupportSignal ?? 0, regionalSupportSignal)
-}));
+})).filter((school) => !excludedSchoolNames.has(school.schoolName));
 
 for (const school of baseSchools) deriveSignals(school);
 
