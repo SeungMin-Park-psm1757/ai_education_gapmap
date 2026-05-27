@@ -1,0 +1,32 @@
+{
+  "name": "ai-education-gapmap-mvp",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "fetch:public": "node scripts/fetch-public-data.mjs",
+    "import:public-files": "node scripts/import-public-files.mjs",
+    "score:readiness": "node scripts/calc-readiness-score.mjs",
+    "prepare:data": "npm run fetch:public && npm run import:public-files && npm run score:readiness",
+    "check:data": "node scripts/check-data-readiness.mjs",
+    "check:copy": "node scripts/check-copy.mjs"
+  },
+  "dependencies": {
+    "next": "14.2.35",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "lucide-react": "^0.468.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.10",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "typescript": "^5.5.4",
+    "tailwindcss": "^3.4.10",
+    "postcss": "^8.4.40",
+    "autoprefixer": "^10.4.19"
+  }
+}

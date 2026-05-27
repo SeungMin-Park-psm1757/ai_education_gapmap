@@ -1,0 +1,3154 @@
+[
+  {
+    "schoolId": "7010271",
+    "schoolName": "경기기계공업고등학교",
+    "score": 22,
+    "level": "high",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 22점",
+      "교육 수요 신호: 47점",
+      "AI·SW 학습기회 보강 신호: 5점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 9
+    },
+    "raw": {
+      "educationDemand": 47,
+      "teacherOperation": 23,
+      "digitalAccess": 19,
+      "aiLearningOpportunity": 5,
+      "regionalAccess": 5
+    }
+  },
+  {
+    "schoolId": "0000000",
+    "schoolName": "경기기계공업고등학교부설미래기술교육센터",
+    "score": 22,
+    "level": "high",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 22점",
+      "교육 수요 신호: 47점",
+      "AI·SW 학습기회 보강 신호: 5점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 9
+    },
+    "raw": {
+      "educationDemand": 47,
+      "teacherOperation": 23,
+      "digitalAccess": 19,
+      "aiLearningOpportunity": 5,
+      "regionalAccess": 5
+    }
+  },
+  {
+    "schoolId": "7051174",
+    "schoolName": "공릉중학교",
+    "score": 39,
+    "level": "medium",
+    "type": "교육 수요·취약 여건",
+    "signals": [
+      "지원 소요 지수: 39점",
+      "교육 수요 신호: 61점",
+      "AI·SW 학습기회 보강 신호: 16점"
+    ],
+    "weakFactors": [
+      "교육 수요·취약 여건"
+    ],
+    "recommendedSupports": [
+      "교육 수요·취약 여건 보강 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 7
+    },
+    "raw": {
+      "educationDemand": 61,
+      "teacherOperation": 37,
+      "digitalAccess": 44,
+      "aiLearningOpportunity": 16,
+      "regionalAccess": 30
+    }
+  },
+  {
+    "schoolId": "7011505",
+    "schoolName": "광운인공지능고등학교",
+    "score": 28,
+    "level": "high",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 28점",
+      "교육 수요 신호: 40점",
+      "AI·SW 학습기회 보강 신호: 19점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 8
+    },
+    "raw": {
+      "educationDemand": 40,
+      "teacherOperation": 24,
+      "digitalAccess": 28,
+      "aiLearningOpportunity": 19,
+      "regionalAccess": 25
+    }
+  },
+  {
+    "schoolId": "7051175",
+    "schoolName": "광운중학교",
+    "score": 38,
+    "level": "medium",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 38점",
+      "교육 수요 신호: 45점",
+      "AI·SW 학습기회 보강 신호: 36점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 8
+    },
+    "raw": {
+      "educationDemand": 45,
+      "teacherOperation": 48,
+      "digitalAccess": 24,
+      "aiLearningOpportunity": 36,
+      "regionalAccess": 34
+    }
+  },
+  {
+    "schoolId": "7010564",
+    "schoolName": "노원고등학교",
+    "score": 34,
+    "level": "medium",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 34점",
+      "교육 수요 신호: 53점",
+      "AI·SW 학습기회 보강 신호: 33점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 9
+    },
+    "raw": {
+      "educationDemand": 53,
+      "teacherOperation": 40,
+      "digitalAccess": 11,
+      "aiLearningOpportunity": 33,
+      "regionalAccess": 23
+    }
+  },
+  {
+    "schoolId": "7051177",
+    "schoolName": "노원중학교",
+    "score": 38,
+    "level": "medium",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 38점",
+      "교육 수요 신호: 48점",
+      "AI·SW 학습기회 보강 신호: 33점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 8
+    },
+    "raw": {
+      "educationDemand": 48,
+      "teacherOperation": 47,
+      "digitalAccess": 18,
+      "aiLearningOpportunity": 33,
+      "regionalAccess": 40
+    }
+  },
+  {
+    "schoolId": "7051178",
+    "schoolName": "노일중학교",
+    "score": 36,
+    "level": "medium",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 36점",
+      "교육 수요 신호: 47점",
+      "AI·SW 학습기회 보강 신호: 40점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 8
+    },
+    "raw": {
+      "educationDemand": 47,
+      "teacherOperation": 46,
+      "digitalAccess": 23,
+      "aiLearningOpportunity": 40,
+      "regionalAccess": 13
+    }
+  },
+  {
+    "schoolId": "7051179",
+    "schoolName": "녹천중학교",
+    "score": 36,
+    "level": "medium",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 36점",
+      "교육 수요 신호: 49점",
+      "AI·SW 학습기회 보강 신호: 35점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 8
+    },
+    "raw": {
+      "educationDemand": 49,
+      "teacherOperation": 50,
+      "digitalAccess": 11,
+      "aiLearningOpportunity": 35,
+      "regionalAccess": 30
+    }
+  },
+  {
+    "schoolId": "7010146",
+    "schoolName": "대진고등학교",
+    "score": 41,
+    "level": "medium",
+    "type": "교육 수요·취약 여건",
+    "signals": [
+      "지원 소요 지수: 41점",
+      "교육 수요 신호: 67점",
+      "AI·SW 학습기회 보강 신호: 16점"
+    ],
+    "weakFactors": [
+      "교육 수요·취약 여건"
+    ],
+    "recommendedSupports": [
+      "교육 수요·취약 여건 보강 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 8
+    },
+    "raw": {
+      "educationDemand": 67,
+      "teacherOperation": 40,
+      "digitalAccess": 36,
+      "aiLearningOpportunity": 16,
+      "regionalAccess": 40
+    }
+  },
+  {
+    "schoolId": "7010147",
+    "schoolName": "대진여자고등학교",
+    "score": 38,
+    "level": "medium",
+    "type": "교육 수요·취약 여건",
+    "signals": [
+      "지원 소요 지수: 38점",
+      "교육 수요 신호: 70점",
+      "AI·SW 학습기회 보강 신호: 15점"
+    ],
+    "weakFactors": [
+      "교육 수요·취약 여건"
+    ],
+    "recommendedSupports": [
+      "교육 수요·취약 여건 보강 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 8
+    },
+    "raw": {
+      "educationDemand": 70,
+      "teacherOperation": 35,
+      "digitalAccess": 26,
+      "aiLearningOpportunity": 15,
+      "regionalAccess": 33
+    }
+  },
+  {
+    "schoolId": "7010591",
+    "schoolName": "미래산업과학고등학교",
+    "score": 23,
+    "level": "high",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 23점",
+      "교육 수요 신호: 45점",
+      "AI·SW 학습기회 보강 신호: 0점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 9
+    },
+    "raw": {
+      "educationDemand": 45,
+      "teacherOperation": 30,
+      "digitalAccess": 17,
+      "aiLearningOpportunity": 0,
+      "regionalAccess": 13
+    }
+  },
+  {
+    "schoolId": "7010736",
+    "schoolName": "불암고등학교",
+    "score": 47,
+    "level": "attention",
+    "type": "교육 수요·취약 여건",
+    "signals": [
+      "지원 소요 지수: 47점",
+      "교육 수요 신호: 64점",
+      "AI·SW 학습기회 보강 신호: 31점"
+    ],
+    "weakFactors": [
+      "교육 수요·취약 여건",
+      "지역 지원 접근성"
+    ],
+    "recommendedSupports": [
+      "교육 수요·취약 여건 보강 검토",
+      "지역 지원 접근성 보강 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 7
+    },
+    "raw": {
+      "educationDemand": 64,
+      "teacherOperation": 35,
+      "digitalAccess": 44,
+      "aiLearningOpportunity": 31,
+      "regionalAccess": 62
+    }
+  },
+  {
+    "schoolId": "7051184",
+    "schoolName": "불암중학교",
+    "score": 44,
+    "level": "medium",
+    "type": "교육 수요·취약 여건",
+    "signals": [
+      "지원 소요 지수: 44점",
+      "교육 수요 신호: 83점",
+      "AI·SW 학습기회 보강 신호: 28점"
+    ],
+    "weakFactors": [
+      "교육 수요·취약 여건"
+    ],
+    "recommendedSupports": [
+      "교육 수요·취약 여건 보강 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 9
+    },
+    "raw": {
+      "educationDemand": 83,
+      "teacherOperation": 48,
+      "digitalAccess": 34,
+      "aiLearningOpportunity": 28,
+      "regionalAccess": 11
+    }
+  },
+  {
+    "schoolId": "7051185",
+    "schoolName": "상경중학교",
+    "score": 42,
+    "level": "medium",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 42점",
+      "교육 수요 신호: 57점",
+      "AI·SW 학습기회 보강 신호: 34점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 8
+    },
+    "raw": {
+      "educationDemand": 57,
+      "teacherOperation": 51,
+      "digitalAccess": 34,
+      "aiLearningOpportunity": 34,
+      "regionalAccess": 29
+    }
+  },
+  {
+    "schoolId": "7010082",
+    "schoolName": "상계고등학교",
+    "score": 40,
+    "level": "medium",
+    "type": "교육 수요·취약 여건",
+    "signals": [
+      "지원 소요 지수: 40점",
+      "교육 수요 신호: 62점",
+      "AI·SW 학습기회 보강 신호: 28점"
+    ],
+    "weakFactors": [
+      "교육 수요·취약 여건"
+    ],
+    "recommendedSupports": [
+      "교육 수요·취약 여건 보강 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 9
+    },
+    "raw": {
+      "educationDemand": 62,
+      "teacherOperation": 37,
+      "digitalAccess": 27,
+      "aiLearningOpportunity": 28,
+      "regionalAccess": 42
+    }
+  },
+  {
+    "schoolId": "7051186",
+    "schoolName": "상계제일중학교",
+    "score": 35,
+    "level": "medium",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 35점",
+      "교육 수요 신호: 52점",
+      "AI·SW 학습기회 보강 신호: 27점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 9
+    },
+    "raw": {
+      "educationDemand": 52,
+      "teacherOperation": 41,
+      "digitalAccess": 23,
+      "aiLearningOpportunity": 27,
+      "regionalAccess": 24
+    }
+  },
+  {
+    "schoolId": "7051187",
+    "schoolName": "상계중학교",
+    "score": 36,
+    "level": "medium",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 36점",
+      "교육 수요 신호: 49점",
+      "AI·SW 학습기회 보강 신호: 27점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 9
+    },
+    "raw": {
+      "educationDemand": 49,
+      "teacherOperation": 45,
+      "digitalAccess": 21,
+      "aiLearningOpportunity": 27,
+      "regionalAccess": 32
+    }
+  },
+  {
+    "schoolId": "7010593",
+    "schoolName": "상명고등학교",
+    "score": 42,
+    "level": "medium",
+    "type": "교육 수요·취약 여건",
+    "signals": [
+      "지원 소요 지수: 42점",
+      "교육 수요 신호: 73점",
+      "AI·SW 학습기회 보강 신호: 11점"
+    ],
+    "weakFactors": [
+      "교육 수요·취약 여건"
+    ],
+    "recommendedSupports": [
+      "교육 수요·취약 여건 보강 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 8
+    },
+    "raw": {
+      "educationDemand": 73,
+      "teacherOperation": 39,
+      "digitalAccess": 35,
+      "aiLearningOpportunity": 11,
+      "regionalAccess": 44
+    }
+  },
+  {
+    "schoolId": "7051188",
+    "schoolName": "상명중학교",
+    "score": 45,
+    "level": "attention",
+    "type": "교육 수요·취약 여건",
+    "signals": [
+      "지원 소요 지수: 45점",
+      "교육 수요 신호: 77점",
+      "AI·SW 학습기회 보강 신호: 11점"
+    ],
+    "weakFactors": [
+      "교육 수요·취약 여건"
+    ],
+    "recommendedSupports": [
+      "교육 수요·취약 여건 보강 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 7
+    },
+    "raw": {
+      "educationDemand": 77,
+      "teacherOperation": 52,
+      "digitalAccess": 44,
+      "aiLearningOpportunity": 11,
+      "regionalAccess": 30
+    }
+  },
+  {
+    "schoolId": "7051110",
+    "schoolName": "상명초등학교",
+    "score": 40,
+    "level": "medium",
+    "type": "교육 수요·취약 여건",
+    "signals": [
+      "지원 소요 지수: 40점",
+      "교육 수요 신호: 82점",
+      "AI·SW 학습기회 보강 신호: 15점"
+    ],
+    "weakFactors": [
+      "교육 수요·취약 여건",
+      "교원·운영 여건"
+    ],
+    "recommendedSupports": [
+      "교육 수요·취약 여건 보강 검토",
+      "교원·운영 여건 보강 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 9
+    },
+    "raw": {
+      "educationDemand": 82,
+      "teacherOperation": 82,
+      "digitalAccess": 0,
+      "aiLearningOpportunity": 15,
+      "regionalAccess": 0
+    }
+  },
+  {
+    "schoolId": "7051189",
+    "schoolName": "상원중학교",
+    "score": 31,
+    "level": "medium",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 31점",
+      "교육 수요 신호: 49점",
+      "AI·SW 학습기회 보강 신호: 35점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 9
+    },
+    "raw": {
+      "educationDemand": 49,
+      "teacherOperation": 48,
+      "digitalAccess": 0,
+      "aiLearningOpportunity": 35,
+      "regionalAccess": 15
+    }
+  },
+  {
+    "schoolId": "7010182",
+    "schoolName": "서라벌고등학교",
+    "score": 37,
+    "level": "medium",
+    "type": "교육 수요·취약 여건",
+    "signals": [
+      "지원 소요 지수: 37점",
+      "교육 수요 신호: 76점",
+      "AI·SW 학습기회 보강 신호: 12점"
+    ],
+    "weakFactors": [
+      "교육 수요·취약 여건"
+    ],
+    "recommendedSupports": [
+      "교육 수요·취약 여건 보강 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 8
+    },
+    "raw": {
+      "educationDemand": 76,
+      "teacherOperation": 39,
+      "digitalAccess": 29,
+      "aiLearningOpportunity": 12,
+      "regionalAccess": 10
+    }
+  },
+  {
+    "schoolId": "7051112",
+    "schoolName": "서울계상초등학교",
+    "score": 28,
+    "level": "high",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 28점",
+      "교육 수요 신호: 42점",
+      "AI·SW 학습기회 보강 신호: 18점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 9
+    },
+    "raw": {
+      "educationDemand": 42,
+      "teacherOperation": 53,
+      "digitalAccess": 9,
+      "aiLearningOpportunity": 18,
+      "regionalAccess": 12
+    }
+  },
+  {
+    "schoolId": "7051113",
+    "schoolName": "서울공릉초등학교",
+    "score": 24,
+    "level": "high",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 24점",
+      "교육 수요 신호: 36점",
+      "AI·SW 학습기회 보강 신호: 19점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 9
+    },
+    "raw": {
+      "educationDemand": 36,
+      "teacherOperation": 48,
+      "digitalAccess": 10,
+      "aiLearningOpportunity": 19,
+      "regionalAccess": 0
+    }
+  },
+  {
+    "schoolId": "7051114",
+    "schoolName": "서울공연초등학교",
+    "score": 35,
+    "level": "medium",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 35점",
+      "교육 수요 신호: 45점",
+      "AI·SW 학습기회 보강 신호: 19점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 9
+    },
+    "raw": {
+      "educationDemand": 45,
+      "teacherOperation": 52,
+      "digitalAccess": 34,
+      "aiLearningOpportunity": 19,
+      "regionalAccess": 18
+    }
+  },
+  {
+    "schoolId": "7051115",
+    "schoolName": "서울노원초등학교",
+    "score": 28,
+    "level": "high",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 28점",
+      "교육 수요 신호: 32점",
+      "AI·SW 학습기회 보강 신호: 32점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 9
+    },
+    "raw": {
+      "educationDemand": 32,
+      "teacherOperation": 47,
+      "digitalAccess": 8,
+      "aiLearningOpportunity": 32,
+      "regionalAccess": 15
+    }
+  },
+  {
+    "schoolId": "7051116",
+    "schoolName": "서울노일초등학교",
+    "score": 35,
+    "level": "medium",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 35점",
+      "교육 수요 신호: 46점",
+      "AI·SW 학습기회 보강 신호: 16점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 8
+    },
+    "raw": {
+      "educationDemand": 46,
+      "teacherOperation": 47,
+      "digitalAccess": 34,
+      "aiLearningOpportunity": 16,
+      "regionalAccess": 30
+    }
+  },
+  {
+    "schoolId": "7051117",
+    "schoolName": "서울녹천초등학교",
+    "score": 22,
+    "level": "high",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 22점",
+      "교육 수요 신호: 29점",
+      "AI·SW 학습기회 보강 신호: 22점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 9
+    },
+    "raw": {
+      "educationDemand": 29,
+      "teacherOperation": 49,
+      "digitalAccess": 0,
+      "aiLearningOpportunity": 22,
+      "regionalAccess": 2
+    }
+  },
+  {
+    "schoolId": "7051119",
+    "schoolName": "서울당현초등학교",
+    "score": 32,
+    "level": "medium",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 32점",
+      "교육 수요 신호: 42점",
+      "AI·SW 학습기회 보강 신호: 21점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 9
+    },
+    "raw": {
+      "educationDemand": 42,
+      "teacherOperation": 49,
+      "digitalAccess": 22,
+      "aiLearningOpportunity": 21,
+      "regionalAccess": 20
+    }
+  },
+  {
+    "schoolId": "7051120",
+    "schoolName": "서울덕암초등학교",
+    "score": 34,
+    "level": "medium",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 34점",
+      "교육 수요 신호: 53점",
+      "AI·SW 학습기회 보강 신호: 16점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 9
+    },
+    "raw": {
+      "educationDemand": 53,
+      "teacherOperation": 53,
+      "digitalAccess": 29,
+      "aiLearningOpportunity": 16,
+      "regionalAccess": 6
+    }
+  },
+  {
+    "schoolId": "7011494",
+    "schoolName": "서울동산고등학교",
+    "score": 34,
+    "level": "medium",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 34점",
+      "교육 수요 신호: 57점",
+      "AI·SW 학습기회 보강 신호: 10점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 8
+    },
+    "raw": {
+      "educationDemand": 57,
+      "teacherOperation": 28,
+      "digitalAccess": 36,
+      "aiLearningOpportunity": 10,
+      "regionalAccess": 31
+    }
+  },
+  {
+    "schoolId": "7051122",
+    "schoolName": "서울동일초등학교",
+    "score": 29,
+    "level": "high",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 29점",
+      "교육 수요 신호: 52점",
+      "AI·SW 학습기회 보강 신호: 12점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 9
+    },
+    "raw": {
+      "educationDemand": 52,
+      "teacherOperation": 54,
+      "digitalAccess": 13,
+      "aiLearningOpportunity": 12,
+      "regionalAccess": 0
+    }
+  },
+  {
+    "schoolId": "7010582",
+    "schoolName": "서울동천학교",
+    "score": 27,
+    "level": "high",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 27점",
+      "교육 수요 신호: 17점",
+      "AI·SW 학습기회 보강 신호: 21점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 6
+    },
+    "raw": {
+      "educationDemand": 17,
+      "teacherOperation": 22,
+      "digitalAccess": 44,
+      "aiLearningOpportunity": 21,
+      "regionalAccess": 35
+    }
+  },
+  {
+    "schoolId": "7051125",
+    "schoolName": "서울불암초등학교",
+    "score": 32,
+    "level": "medium",
+    "type": "교육 수요·취약 여건",
+    "signals": [
+      "지원 소요 지수: 32점",
+      "교육 수요 신호: 63점",
+      "AI·SW 학습기회 보강 신호: 12점"
+    ],
+    "weakFactors": [
+      "교육 수요·취약 여건"
+    ],
+    "recommendedSupports": [
+      "교육 수요·취약 여건 보강 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 9
+    },
+    "raw": {
+      "educationDemand": 63,
+      "teacherOperation": 51,
+      "digitalAccess": 16,
+      "aiLearningOpportunity": 12,
+      "regionalAccess": 0
+    }
+  },
+  {
+    "schoolId": "7051126",
+    "schoolName": "서울상경초등학교",
+    "score": 27,
+    "level": "high",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 27점",
+      "교육 수요 신호: 52점",
+      "AI·SW 학습기회 보강 신호: 18점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 9
+    },
+    "raw": {
+      "educationDemand": 52,
+      "teacherOperation": 50,
+      "digitalAccess": 1,
+      "aiLearningOpportunity": 18,
+      "regionalAccess": 0
+    }
+  },
+  {
+    "schoolId": "7051127",
+    "schoolName": "서울상계초등학교",
+    "score": 28,
+    "level": "high",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 28점",
+      "교육 수요 신호: 32점",
+      "AI·SW 학습기회 보강 신호: 22점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 9
+    },
+    "raw": {
+      "educationDemand": 32,
+      "teacherOperation": 46,
+      "digitalAccess": 18,
+      "aiLearningOpportunity": 22,
+      "regionalAccess": 16
+    }
+  },
+  {
+    "schoolId": "7051128",
+    "schoolName": "서울상곡초등학교",
+    "score": 32,
+    "level": "medium",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 32점",
+      "교육 수요 신호: 50점",
+      "AI·SW 학습기회 보강 신호: 0점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 8
+    },
+    "raw": {
+      "educationDemand": 50,
+      "teacherOperation": 52,
+      "digitalAccess": 26,
+      "aiLearningOpportunity": 0,
+      "regionalAccess": 24
+    }
+  },
+  {
+    "schoolId": "7051129",
+    "schoolName": "서울상수초등학교",
+    "score": 29,
+    "level": "high",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 29점",
+      "교육 수요 신호: 48점",
+      "AI·SW 학습기회 보강 신호: 19점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 9
+    },
+    "raw": {
+      "educationDemand": 48,
+      "teacherOperation": 50,
+      "digitalAccess": 10,
+      "aiLearningOpportunity": 19,
+      "regionalAccess": 7
+    }
+  },
+  {
+    "schoolId": "7051130",
+    "schoolName": "서울상원초등학교",
+    "score": 31,
+    "level": "medium",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 31점",
+      "교육 수요 신호: 40점",
+      "AI·SW 학습기회 보강 신호: 25점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 8
+    },
+    "raw": {
+      "educationDemand": 40,
+      "teacherOperation": 50,
+      "digitalAccess": 20,
+      "aiLearningOpportunity": 25,
+      "regionalAccess": 13
+    }
+  },
+  {
+    "schoolId": "7051131",
+    "schoolName": "서울상월초등학교",
+    "score": 32,
+    "level": "medium",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 32점",
+      "교육 수요 신호: 29점",
+      "AI·SW 학습기회 보강 신호: 33점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 9
+    },
+    "raw": {
+      "educationDemand": 29,
+      "teacherOperation": 51,
+      "digitalAccess": 16,
+      "aiLearningOpportunity": 33,
+      "regionalAccess": 33
+    }
+  },
+  {
+    "schoolId": "7051132",
+    "schoolName": "서울상천초등학교",
+    "score": 34,
+    "level": "medium",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 34점",
+      "교육 수요 신호: 38점",
+      "AI·SW 학습기회 보강 신호: 17점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 8
+    },
+    "raw": {
+      "educationDemand": 38,
+      "teacherOperation": 51,
+      "digitalAccess": 38,
+      "aiLearningOpportunity": 17,
+      "regionalAccess": 24
+    }
+  },
+  {
+    "schoolId": "7051133",
+    "schoolName": "서울선곡초등학교",
+    "score": 36,
+    "level": "medium",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 36점",
+      "교육 수요 신호: 47점",
+      "AI·SW 학습기회 보강 신호: 16점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 8
+    },
+    "raw": {
+      "educationDemand": 47,
+      "teacherOperation": 46,
+      "digitalAccess": 41,
+      "aiLearningOpportunity": 16,
+      "regionalAccess": 24
+    }
+  },
+  {
+    "schoolId": "7051134",
+    "schoolName": "서울수락초등학교",
+    "score": 34,
+    "level": "medium",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 34점",
+      "교육 수요 신호: 48점",
+      "AI·SW 학습기회 보강 신호: 16점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 9
+    },
+    "raw": {
+      "educationDemand": 48,
+      "teacherOperation": 58,
+      "digitalAccess": 23,
+      "aiLearningOpportunity": 16,
+      "regionalAccess": 18
+    }
+  },
+  {
+    "schoolId": "7051135",
+    "schoolName": "서울수암초등학교",
+    "score": 35,
+    "level": "medium",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 35점",
+      "교육 수요 신호: 48점",
+      "AI·SW 학습기회 보강 신호: 16점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 9
+    },
+    "raw": {
+      "educationDemand": 48,
+      "teacherOperation": 50,
+      "digitalAccess": 31,
+      "aiLearningOpportunity": 16,
+      "regionalAccess": 24
+    }
+  },
+  {
+    "schoolId": "7051137",
+    "schoolName": "서울신계초등학교",
+    "score": 29,
+    "level": "high",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 29점",
+      "교육 수요 신호: 26점",
+      "AI·SW 학습기회 보강 신호: 23점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 9
+    },
+    "raw": {
+      "educationDemand": 26,
+      "teacherOperation": 44,
+      "digitalAccess": 25,
+      "aiLearningOpportunity": 23,
+      "regionalAccess": 28
+    }
+  },
+  {
+    "schoolId": "7051139",
+    "schoolName": "서울신상계초등학교",
+    "score": 34,
+    "level": "medium",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 34점",
+      "교육 수요 신호: 42점",
+      "AI·SW 학습기회 보강 신호: 16점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 9
+    },
+    "raw": {
+      "educationDemand": 42,
+      "teacherOperation": 49,
+      "digitalAccess": 34,
+      "aiLearningOpportunity": 16,
+      "regionalAccess": 24
+    }
+  },
+  {
+    "schoolId": "7010960",
+    "schoolName": "서울아이티고등학교",
+    "score": 26,
+    "level": "high",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 26점",
+      "교육 수요 신호: 41점",
+      "AI·SW 학습기회 보강 신호: 15점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 8
+    },
+    "raw": {
+      "educationDemand": 41,
+      "teacherOperation": 26,
+      "digitalAccess": 23,
+      "aiLearningOpportunity": 15,
+      "regionalAccess": 20
+    }
+  },
+  {
+    "schoolId": "7051144",
+    "schoolName": "서울연지초등학교",
+    "score": 25,
+    "level": "high",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 25점",
+      "교육 수요 신호: 33점",
+      "AI·SW 학습기회 보강 신호: 18점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 9
+    },
+    "raw": {
+      "educationDemand": 33,
+      "teacherOperation": 51,
+      "digitalAccess": 17,
+      "aiLearningOpportunity": 18,
+      "regionalAccess": 0
+    }
+  },
+  {
+    "schoolId": "7051145",
+    "schoolName": "서울연촌초등학교",
+    "score": 37,
+    "level": "medium",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 37점",
+      "교육 수요 신호: 46점",
+      "AI·SW 학습기회 보강 신호: 16점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 7
+    },
+    "raw": {
+      "educationDemand": 46,
+      "teacherOperation": 47,
+      "digitalAccess": 44,
+      "aiLearningOpportunity": 16,
+      "regionalAccess": 30
+    }
+  },
+  {
+    "schoolId": "7051147",
+    "schoolName": "서울온곡초등학교",
+    "score": 30,
+    "level": "medium",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 30점",
+      "교육 수요 신호: 53점",
+      "AI·SW 학습기회 보강 신호: 15점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 9
+    },
+    "raw": {
+      "educationDemand": 53,
+      "teacherOperation": 55,
+      "digitalAccess": 12,
+      "aiLearningOpportunity": 15,
+      "regionalAccess": 0
+    }
+  },
+  {
+    "schoolId": "7051148",
+    "schoolName": "서울용동초등학교",
+    "score": 30,
+    "level": "medium",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 30점",
+      "교육 수요 신호: 30점",
+      "AI·SW 학습기회 보강 신호: 31점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 8
+    },
+    "raw": {
+      "educationDemand": 30,
+      "teacherOperation": 45,
+      "digitalAccess": 20,
+      "aiLearningOpportunity": 31,
+      "regionalAccess": 21
+    }
+  },
+  {
+    "schoolId": "7051149",
+    "schoolName": "서울용원초등학교",
+    "score": 38,
+    "level": "medium",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 38점",
+      "교육 수요 신호: 51점",
+      "AI·SW 학습기회 보강 신호: 20점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 8
+    },
+    "raw": {
+      "educationDemand": 51,
+      "teacherOperation": 54,
+      "digitalAccess": 33,
+      "aiLearningOpportunity": 20,
+      "regionalAccess": 28
+    }
+  },
+  {
+    "schoolId": "7051150",
+    "schoolName": "서울원광초등학교",
+    "score": 40,
+    "level": "medium",
+    "type": "교육 수요·취약 여건",
+    "signals": [
+      "지원 소요 지수: 40점",
+      "교육 수요 신호: 64점",
+      "AI·SW 학습기회 보강 신호: 13점"
+    ],
+    "weakFactors": [
+      "교육 수요·취약 여건"
+    ],
+    "recommendedSupports": [
+      "교육 수요·취약 여건 보강 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 9
+    },
+    "raw": {
+      "educationDemand": 64,
+      "teacherOperation": 55,
+      "digitalAccess": 39,
+      "aiLearningOpportunity": 13,
+      "regionalAccess": 18
+    }
+  },
+  {
+    "schoolId": "7051151",
+    "schoolName": "서울월계초등학교",
+    "score": 34,
+    "level": "medium",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 34점",
+      "교육 수요 신호: 37점",
+      "AI·SW 학습기회 보강 신호: 31점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 9
+    },
+    "raw": {
+      "educationDemand": 37,
+      "teacherOperation": 52,
+      "digitalAccess": 27,
+      "aiLearningOpportunity": 31,
+      "regionalAccess": 19
+    }
+  },
+  {
+    "schoolId": "7051153",
+    "schoolName": "서울을지초등학교",
+    "score": 42,
+    "level": "medium",
+    "type": "교육 수요·취약 여건",
+    "signals": [
+      "지원 소요 지수: 42점",
+      "교육 수요 신호: 87점",
+      "AI·SW 학습기회 보강 신호: 1점"
+    ],
+    "weakFactors": [
+      "교육 수요·취약 여건"
+    ],
+    "recommendedSupports": [
+      "교육 수요·취약 여건 보강 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 9
+    },
+    "raw": {
+      "educationDemand": 87,
+      "teacherOperation": 49,
+      "digitalAccess": 39,
+      "aiLearningOpportunity": 1,
+      "regionalAccess": 18
+    }
+  },
+  {
+    "schoolId": "7010533",
+    "schoolName": "서울정민학교",
+    "score": 16,
+    "level": "high",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 16점",
+      "교육 수요 신호: 15점",
+      "AI·SW 학습기회 보강 신호: 13점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 7
+    },
+    "raw": {
+      "educationDemand": 15,
+      "teacherOperation": 16,
+      "digitalAccess": 32,
+      "aiLearningOpportunity": 13,
+      "regionalAccess": 0
+    }
+  },
+  {
+    "schoolId": "7051155",
+    "schoolName": "서울중계초등학교",
+    "score": 37,
+    "level": "medium",
+    "type": "교육 수요·취약 여건",
+    "signals": [
+      "지원 소요 지수: 37점",
+      "교육 수요 신호: 64점",
+      "AI·SW 학습기회 보강 신호: 15점"
+    ],
+    "weakFactors": [
+      "교육 수요·취약 여건"
+    ],
+    "recommendedSupports": [
+      "교육 수요·취약 여건 보강 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 8
+    },
+    "raw": {
+      "educationDemand": 64,
+      "teacherOperation": 52,
+      "digitalAccess": 33,
+      "aiLearningOpportunity": 15,
+      "regionalAccess": 6
+    }
+  },
+  {
+    "schoolId": "7051156",
+    "schoolName": "서울중원초등학교",
+    "score": 31,
+    "level": "medium",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 31점",
+      "교육 수요 신호: 44점",
+      "AI·SW 학습기회 보강 신호: 17점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 9
+    },
+    "raw": {
+      "educationDemand": 44,
+      "teacherOperation": 53,
+      "digitalAccess": 23,
+      "aiLearningOpportunity": 17,
+      "regionalAccess": 10
+    }
+  },
+  {
+    "schoolId": "7051157",
+    "schoolName": "서울중평초등학교",
+    "score": 42,
+    "level": "medium",
+    "type": "교육 수요·취약 여건",
+    "signals": [
+      "지원 소요 지수: 42점",
+      "교육 수요 신호: 82점",
+      "AI·SW 학습기회 보강 신호: 9점"
+    ],
+    "weakFactors": [
+      "교육 수요·취약 여건"
+    ],
+    "recommendedSupports": [
+      "교육 수요·취약 여건 보강 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 8
+    },
+    "raw": {
+      "educationDemand": 82,
+      "teacherOperation": 43,
+      "digitalAccess": 42,
+      "aiLearningOpportunity": 9,
+      "regionalAccess": 18
+    }
+  },
+  {
+    "schoolId": "7051158",
+    "schoolName": "서울중현초등학교",
+    "score": 23,
+    "level": "high",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 23점",
+      "교육 수요 신호: 20점",
+      "AI·SW 학습기회 보강 신호: 33점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 9
+    },
+    "raw": {
+      "educationDemand": 20,
+      "teacherOperation": 45,
+      "digitalAccess": 0,
+      "aiLearningOpportunity": 33,
+      "regionalAccess": 15
+    }
+  },
+  {
+    "schoolId": "7051165",
+    "schoolName": "서울청계초등학교",
+    "score": 33,
+    "level": "medium",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 33점",
+      "교육 수요 신호: 29점",
+      "AI·SW 학습기회 보강 신호: 31점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 8
+    },
+    "raw": {
+      "educationDemand": 29,
+      "teacherOperation": 47,
+      "digitalAccess": 33,
+      "aiLearningOpportunity": 31,
+      "regionalAccess": 25
+    }
+  },
+  {
+    "schoolId": "7051167",
+    "schoolName": "서울태랑초등학교",
+    "score": 41,
+    "level": "medium",
+    "type": "교육 수요·취약 여건",
+    "signals": [
+      "지원 소요 지수: 41점",
+      "교육 수요 신호: 66점",
+      "AI·SW 학습기회 보강 신호: 14점"
+    ],
+    "weakFactors": [
+      "교육 수요·취약 여건"
+    ],
+    "recommendedSupports": [
+      "교육 수요·취약 여건 보강 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 8
+    },
+    "raw": {
+      "educationDemand": 66,
+      "teacherOperation": 47,
+      "digitalAccess": 39,
+      "aiLearningOpportunity": 14,
+      "regionalAccess": 30
+    }
+  },
+  {
+    "schoolId": "7051168",
+    "schoolName": "서울태릉초등학교",
+    "score": 37,
+    "level": "medium",
+    "type": "교육 수요·취약 여건",
+    "signals": [
+      "지원 소요 지수: 37점",
+      "교육 수요 신호: 64점",
+      "AI·SW 학습기회 보강 신호: 8점"
+    ],
+    "weakFactors": [
+      "교육 수요·취약 여건"
+    ],
+    "recommendedSupports": [
+      "교육 수요·취약 여건 보강 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 8
+    },
+    "raw": {
+      "educationDemand": 64,
+      "teacherOperation": 51,
+      "digitalAccess": 36,
+      "aiLearningOpportunity": 8,
+      "regionalAccess": 12
+    }
+  },
+  {
+    "schoolId": "7051169",
+    "schoolName": "서울한천초등학교",
+    "score": 34,
+    "level": "medium",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 34점",
+      "교육 수요 신호: 58점",
+      "AI·SW 학습기회 보강 신호: 16점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 9
+    },
+    "raw": {
+      "educationDemand": 58,
+      "teacherOperation": 53,
+      "digitalAccess": 14,
+      "aiLearningOpportunity": 16,
+      "regionalAccess": 18
+    }
+  },
+  {
+    "schoolId": "7010559",
+    "schoolName": "수락고등학교",
+    "score": 39,
+    "level": "medium",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 39점",
+      "교육 수요 신호: 52점",
+      "AI·SW 학습기회 보강 신호: 33점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 8
+    },
+    "raw": {
+      "educationDemand": 52,
+      "teacherOperation": 35,
+      "digitalAccess": 32,
+      "aiLearningOpportunity": 33,
+      "regionalAccess": 40
+    }
+  },
+  {
+    "schoolId": "7051191",
+    "schoolName": "수락중학교",
+    "score": 34,
+    "level": "medium",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 34점",
+      "교육 수요 신호: 44점",
+      "AI·SW 학습기회 보강 신호: 34점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 8
+    },
+    "raw": {
+      "educationDemand": 44,
+      "teacherOperation": 45,
+      "digitalAccess": 9,
+      "aiLearningOpportunity": 34,
+      "regionalAccess": 35
+    }
+  },
+  {
+    "schoolId": "7051194",
+    "schoolName": "신상중학교",
+    "score": 33,
+    "level": "medium",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 33점",
+      "교육 수요 신호: 45점",
+      "AI·SW 학습기회 보강 신호: 38점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 9
+    },
+    "raw": {
+      "educationDemand": 45,
+      "teacherOperation": 45,
+      "digitalAccess": 16,
+      "aiLearningOpportunity": 38,
+      "regionalAccess": 15
+    }
+  },
+  {
+    "schoolId": "7051195",
+    "schoolName": "신창중학교",
+    "score": 35,
+    "level": "medium",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 35점",
+      "교육 수요 신호: 41점",
+      "AI·SW 학습기회 보강 신호: 34점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 8
+    },
+    "raw": {
+      "educationDemand": 41,
+      "teacherOperation": 46,
+      "digitalAccess": 12,
+      "aiLearningOpportunity": 34,
+      "regionalAccess": 45
+    }
+  },
+  {
+    "schoolId": "7010853",
+    "schoolName": "아시아퍼시픽국제외국인학교",
+    "score": 34,
+    "level": "medium",
+    "type": "지역 지원 접근성",
+    "signals": [
+      "지원 소요 지수: 34점",
+      "교육 수요 신호: 4점",
+      "AI·SW 학습기회 보강 신호: 35점"
+    ],
+    "weakFactors": [
+      "지역 지원 접근성"
+    ],
+    "recommendedSupports": [
+      "지역 지원 접근성 보강 검토"
+    ],
+    "dataReliability": {
+      "grade": "B",
+      "label": "일부 대리지표",
+      "missingCoreCount": 1,
+      "directFieldCount": 0,
+      "proxyFieldCount": 3
+    },
+    "raw": {
+      "educationDemand": 4,
+      "teacherOperation": 35,
+      "digitalAccess": 41,
+      "aiLearningOpportunity": 35,
+      "regionalAccess": 73
+    }
+  },
+  {
+    "schoolId": "7010594",
+    "schoolName": "염광고등학교",
+    "score": 40,
+    "level": "medium",
+    "type": "교육 수요·취약 여건",
+    "signals": [
+      "지원 소요 지수: 40점",
+      "교육 수요 신호: 64점",
+      "AI·SW 학습기회 보강 신호: 27점"
+    ],
+    "weakFactors": [
+      "교육 수요·취약 여건"
+    ],
+    "recommendedSupports": [
+      "교육 수요·취약 여건 보강 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 9
+    },
+    "raw": {
+      "educationDemand": 64,
+      "teacherOperation": 45,
+      "digitalAccess": 15,
+      "aiLearningOpportunity": 27,
+      "regionalAccess": 44
+    }
+  },
+  {
+    "schoolId": "7011568",
+    "schoolName": "염광메디텍고등학교",
+    "score": 28,
+    "level": "high",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 28점",
+      "교육 수요 신호: 33점",
+      "AI·SW 학습기회 보강 신호: 23점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 8
+    },
+    "raw": {
+      "educationDemand": 33,
+      "teacherOperation": 35,
+      "digitalAccess": 28,
+      "aiLearningOpportunity": 23,
+      "regionalAccess": 14
+    }
+  },
+  {
+    "schoolId": "7051196",
+    "schoolName": "염광중학교",
+    "score": 34,
+    "level": "medium",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 34점",
+      "교육 수요 신호: 46점",
+      "AI·SW 학습기회 보강 신호: 15점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 9
+    },
+    "raw": {
+      "educationDemand": 46,
+      "teacherOperation": 52,
+      "digitalAccess": 29,
+      "aiLearningOpportunity": 15,
+      "regionalAccess": 22
+    }
+  },
+  {
+    "schoolId": "7011088",
+    "schoolName": "영신간호비즈니스고등학교",
+    "score": 34,
+    "level": "medium",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 34점",
+      "교육 수요 신호: 41점",
+      "AI·SW 학습기회 보강 신호: 13점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 7
+    },
+    "raw": {
+      "educationDemand": 41,
+      "teacherOperation": 36,
+      "digitalAccess": 44,
+      "aiLearningOpportunity": 13,
+      "regionalAccess": 33
+    }
+  },
+  {
+    "schoolId": "7010215",
+    "schoolName": "영신여자고등학교",
+    "score": 34,
+    "level": "medium",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 34점",
+      "교육 수요 신호: 55점",
+      "AI·SW 학습기회 보강 신호: 15점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 8
+    },
+    "raw": {
+      "educationDemand": 55,
+      "teacherOperation": 27,
+      "digitalAccess": 40,
+      "aiLearningOpportunity": 15,
+      "regionalAccess": 27
+    }
+  },
+  {
+    "schoolId": "7051197",
+    "schoolName": "온곡중학교",
+    "score": 39,
+    "level": "medium",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 39점",
+      "교육 수요 신호: 54점",
+      "AI·SW 학습기회 보강 신호: 27점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 8
+    },
+    "raw": {
+      "educationDemand": 54,
+      "teacherOperation": 50,
+      "digitalAccess": 31,
+      "aiLearningOpportunity": 27,
+      "regionalAccess": 24
+    }
+  },
+  {
+    "schoolId": "7010222",
+    "schoolName": "용화여자고등학교",
+    "score": 42,
+    "level": "medium",
+    "type": "교육 수요·취약 여건",
+    "signals": [
+      "지원 소요 지수: 42점",
+      "교육 수요 신호: 64점",
+      "AI·SW 학습기회 보강 신호: 29점"
+    ],
+    "weakFactors": [
+      "교육 수요·취약 여건"
+    ],
+    "recommendedSupports": [
+      "교육 수요·취약 여건 보강 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 9
+    },
+    "raw": {
+      "educationDemand": 64,
+      "teacherOperation": 37,
+      "digitalAccess": 34,
+      "aiLearningOpportunity": 29,
+      "regionalAccess": 42
+    }
+  },
+  {
+    "schoolId": "7010735",
+    "schoolName": "월계고등학교",
+    "score": 31,
+    "level": "medium",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 31점",
+      "교육 수요 신호: 52점",
+      "AI·SW 학습기회 보강 신호: 29점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 9
+    },
+    "raw": {
+      "educationDemand": 52,
+      "teacherOperation": 35,
+      "digitalAccess": 10,
+      "aiLearningOpportunity": 29,
+      "regionalAccess": 21
+    }
+  },
+  {
+    "schoolId": "7051198",
+    "schoolName": "월계중학교",
+    "score": 39,
+    "level": "medium",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 39점",
+      "교육 수요 신호: 41점",
+      "AI·SW 학습기회 보강 신호: 40점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 9
+    },
+    "raw": {
+      "educationDemand": 41,
+      "teacherOperation": 46,
+      "digitalAccess": 33,
+      "aiLearningOpportunity": 40,
+      "regionalAccess": 31
+    }
+  },
+  {
+    "schoolId": "7051199",
+    "schoolName": "을지중학교",
+    "score": 46,
+    "level": "attention",
+    "type": "교육 수요·취약 여건",
+    "signals": [
+      "지원 소요 지수: 46점",
+      "교육 수요 신호: 71점",
+      "AI·SW 학습기회 보강 신호: 23점"
+    ],
+    "weakFactors": [
+      "교육 수요·취약 여건"
+    ],
+    "recommendedSupports": [
+      "교육 수요·취약 여건 보강 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 7
+    },
+    "raw": {
+      "educationDemand": 71,
+      "teacherOperation": 49,
+      "digitalAccess": 44,
+      "aiLearningOpportunity": 23,
+      "regionalAccess": 31
+    }
+  },
+  {
+    "schoolId": "7011493",
+    "schoolName": "인덕과학기술고등학교",
+    "score": 29,
+    "level": "high",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 29점",
+      "교육 수요 신호: 43점",
+      "AI·SW 학습기회 보강 신호: 20점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 8
+    },
+    "raw": {
+      "educationDemand": 43,
+      "teacherOperation": 25,
+      "digitalAccess": 14,
+      "aiLearningOpportunity": 20,
+      "regionalAccess": 44
+    }
+  },
+  {
+    "schoolId": "7010235",
+    "schoolName": "재현고등학교",
+    "score": 35,
+    "level": "medium",
+    "type": "교육 수요·취약 여건",
+    "signals": [
+      "지원 소요 지수: 35점",
+      "교육 수요 신호: 66점",
+      "AI·SW 학습기회 보강 신호: 9점"
+    ],
+    "weakFactors": [
+      "교육 수요·취약 여건"
+    ],
+    "recommendedSupports": [
+      "교육 수요·취약 여건 보강 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 9
+    },
+    "raw": {
+      "educationDemand": 66,
+      "teacherOperation": 38,
+      "digitalAccess": 21,
+      "aiLearningOpportunity": 9,
+      "regionalAccess": 32
+    }
+  },
+  {
+    "schoolId": "7051200",
+    "schoolName": "재현중학교",
+    "score": 37,
+    "level": "medium",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 37점",
+      "교육 수요 신호: 56점",
+      "AI·SW 학습기회 보강 신호: 34점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 9
+    },
+    "raw": {
+      "educationDemand": 56,
+      "teacherOperation": 47,
+      "digitalAccess": 26,
+      "aiLearningOpportunity": 34,
+      "regionalAccess": 11
+    }
+  },
+  {
+    "schoolId": "7051202",
+    "schoolName": "중계중학교",
+    "score": 40,
+    "level": "medium",
+    "type": "교육 수요·취약 여건",
+    "signals": [
+      "지원 소요 지수: 40점",
+      "교육 수요 신호: 77점",
+      "AI·SW 학습기회 보강 신호: 18점"
+    ],
+    "weakFactors": [
+      "교육 수요·취약 여건"
+    ],
+    "recommendedSupports": [
+      "교육 수요·취약 여건 보강 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 9
+    },
+    "raw": {
+      "educationDemand": 77,
+      "teacherOperation": 47,
+      "digitalAccess": 31,
+      "aiLearningOpportunity": 18,
+      "regionalAccess": 12
+    }
+  },
+  {
+    "schoolId": "7051203",
+    "schoolName": "중원중학교",
+    "score": 30,
+    "level": "medium",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 30점",
+      "교육 수요 신호: 46점",
+      "AI·SW 학습기회 보강 신호: 32점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 9
+    },
+    "raw": {
+      "educationDemand": 46,
+      "teacherOperation": 44,
+      "digitalAccess": 5,
+      "aiLearningOpportunity": 32,
+      "regionalAccess": 18
+    }
+  },
+  {
+    "schoolId": "7051204",
+    "schoolName": "중평중학교",
+    "score": 41,
+    "level": "medium",
+    "type": "교육 수요·취약 여건",
+    "signals": [
+      "지원 소요 지수: 41점",
+      "교육 수요 신호: 68점",
+      "AI·SW 학습기회 보강 신호: 28점"
+    ],
+    "weakFactors": [
+      "교육 수요·취약 여건"
+    ],
+    "recommendedSupports": [
+      "교육 수요·취약 여건 보강 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 8
+    },
+    "raw": {
+      "educationDemand": 68,
+      "teacherOperation": 42,
+      "digitalAccess": 36,
+      "aiLearningOpportunity": 28,
+      "regionalAccess": 17
+    }
+  },
+  {
+    "schoolId": "7010247",
+    "schoolName": "청원고등학교",
+    "score": 31,
+    "level": "medium",
+    "type": "교육 수요·취약 여건",
+    "signals": [
+      "지원 소요 지수: 31점",
+      "교육 수요 신호: 77점",
+      "AI·SW 학습기회 보강 신호: 0점"
+    ],
+    "weakFactors": [
+      "교육 수요·취약 여건"
+    ],
+    "recommendedSupports": [
+      "교육 수요·취약 여건 보강 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 8
+    },
+    "raw": {
+      "educationDemand": 77,
+      "teacherOperation": 35,
+      "digitalAccess": 19,
+      "aiLearningOpportunity": 0,
+      "regionalAccess": 6
+    }
+  },
+  {
+    "schoolId": "7010552",
+    "schoolName": "청원여자고등학교",
+    "score": 34,
+    "level": "medium",
+    "type": "교육 수요·취약 여건",
+    "signals": [
+      "지원 소요 지수: 34점",
+      "교육 수요 신호: 71점",
+      "AI·SW 학습기회 보강 신호: 13점"
+    ],
+    "weakFactors": [
+      "교육 수요·취약 여건"
+    ],
+    "recommendedSupports": [
+      "교육 수요·취약 여건 보강 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 9
+    },
+    "raw": {
+      "educationDemand": 71,
+      "teacherOperation": 34,
+      "digitalAccess": 17,
+      "aiLearningOpportunity": 13,
+      "regionalAccess": 22
+    }
+  },
+  {
+    "schoolId": "7051208",
+    "schoolName": "청원중학교",
+    "score": 47,
+    "level": "attention",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 47점",
+      "교육 수요 신호: 55점",
+      "AI·SW 학습기회 보강 신호: 35점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 7
+    },
+    "raw": {
+      "educationDemand": 55,
+      "teacherOperation": 49,
+      "digitalAccess": 44,
+      "aiLearningOpportunity": 35,
+      "regionalAccess": 51
+    }
+  },
+  {
+    "schoolId": "7051170",
+    "schoolName": "청원초등학교",
+    "score": 46,
+    "level": "attention",
+    "type": "교육 수요·취약 여건",
+    "signals": [
+      "지원 소요 지수: 46점",
+      "교육 수요 신호: 74점",
+      "AI·SW 학습기회 보강 신호: 15점"
+    ],
+    "weakFactors": [
+      "교육 수요·취약 여건"
+    ],
+    "recommendedSupports": [
+      "교육 수요·취약 여건 보강 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 7
+    },
+    "raw": {
+      "educationDemand": 74,
+      "teacherOperation": 55,
+      "digitalAccess": 43,
+      "aiLearningOpportunity": 15,
+      "regionalAccess": 30
+    }
+  },
+  {
+    "schoolId": "7051171",
+    "schoolName": "태강삼육초등학교",
+    "score": 49,
+    "level": "attention",
+    "type": "교육 수요·취약 여건",
+    "signals": [
+      "지원 소요 지수: 49점",
+      "교육 수요 신호: 83점",
+      "AI·SW 학습기회 보강 신호: 16점"
+    ],
+    "weakFactors": [
+      "교육 수요·취약 여건",
+      "교원·운영 여건"
+    ],
+    "recommendedSupports": [
+      "교육 수요·취약 여건 보강 검토",
+      "교원·운영 여건 보강 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 8
+    },
+    "raw": {
+      "educationDemand": 83,
+      "teacherOperation": 82,
+      "digitalAccess": 35,
+      "aiLearningOpportunity": 16,
+      "regionalAccess": 12
+    }
+  },
+  {
+    "schoolId": "7051209",
+    "schoolName": "태랑중학교",
+    "score": 42,
+    "level": "medium",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 42점",
+      "교육 수요 신호: 58점",
+      "AI·SW 학습기회 보강 신호: 28점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 7
+    },
+    "raw": {
+      "educationDemand": 58,
+      "teacherOperation": 42,
+      "digitalAccess": 44,
+      "aiLearningOpportunity": 28,
+      "regionalAccess": 30
+    }
+  },
+  {
+    "schoolId": "7051210",
+    "schoolName": "하계중학교",
+    "score": 39,
+    "level": "medium",
+    "type": "교육 수요·취약 여건",
+    "signals": [
+      "지원 소요 지수: 39점",
+      "교육 수요 신호: 61점",
+      "AI·SW 학습기회 보강 신호: 28점"
+    ],
+    "weakFactors": [
+      "교육 수요·취약 여건"
+    ],
+    "recommendedSupports": [
+      "교육 수요·취약 여건 보강 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 8
+    },
+    "raw": {
+      "educationDemand": 61,
+      "teacherOperation": 41,
+      "digitalAccess": 31,
+      "aiLearningOpportunity": 28,
+      "regionalAccess": 27
+    }
+  },
+  {
+    "schoolId": "7011144",
+    "schoolName": "학력인정 청암고등학교(2년제)",
+    "score": 64,
+    "level": "attention",
+    "type": "교육 수요·취약 여건",
+    "signals": [
+      "지원 소요 지수: 64점",
+      "교육 수요 신호: 71점",
+      "AI·SW 학습기회 보강 신호: 55점"
+    ],
+    "weakFactors": [
+      "교육 수요·취약 여건",
+      "교원·운영 여건",
+      "디지털·학습공간 기반",
+      "지역 지원 접근성"
+    ],
+    "recommendedSupports": [
+      "교육 수요·취약 여건 보강 검토",
+      "교원·운영 여건 보강 검토",
+      "디지털·학습공간 기반 보강 검토",
+      "지역 지원 접근성 보강 검토"
+    ],
+    "dataReliability": {
+      "grade": "B",
+      "label": "일부 대리지표",
+      "missingCoreCount": 2,
+      "directFieldCount": 3,
+      "proxyFieldCount": 1
+    },
+    "raw": {
+      "educationDemand": 71,
+      "teacherOperation": 61,
+      "digitalAccess": 63,
+      "aiLearningOpportunity": 55,
+      "regionalAccess": 71
+    }
+  },
+  {
+    "schoolId": "7011145",
+    "schoolName": "학력인정 청암중학교(2년제)",
+    "score": 64,
+    "level": "attention",
+    "type": "교육 수요·취약 여건",
+    "signals": [
+      "지원 소요 지수: 64점",
+      "교육 수요 신호: 72점",
+      "AI·SW 학습기회 보강 신호: 55점"
+    ],
+    "weakFactors": [
+      "교육 수요·취약 여건",
+      "교원·운영 여건",
+      "디지털·학습공간 기반",
+      "지역 지원 접근성"
+    ],
+    "recommendedSupports": [
+      "교육 수요·취약 여건 보강 검토",
+      "교원·운영 여건 보강 검토",
+      "디지털·학습공간 기반 보강 검토",
+      "지역 지원 접근성 보강 검토"
+    ],
+    "dataReliability": {
+      "grade": "B",
+      "label": "일부 대리지표",
+      "missingCoreCount": 2,
+      "directFieldCount": 3,
+      "proxyFieldCount": 1
+    },
+    "raw": {
+      "educationDemand": 72,
+      "teacherOperation": 61,
+      "digitalAccess": 63,
+      "aiLearningOpportunity": 55,
+      "regionalAccess": 71
+    }
+  },
+  {
+    "schoolId": "7010252",
+    "schoolName": "한국삼육고등학교",
+    "score": 40,
+    "level": "medium",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 40점",
+      "교육 수요 신호: 54점",
+      "AI·SW 학습기회 보강 신호: 32점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 8
+    },
+    "raw": {
+      "educationDemand": 54,
+      "teacherOperation": 43,
+      "digitalAccess": 38,
+      "aiLearningOpportunity": 32,
+      "regionalAccess": 25
+    }
+  },
+  {
+    "schoolId": "7051259",
+    "schoolName": "한국삼육중학교",
+    "score": 48,
+    "level": "attention",
+    "type": "AI·SW 학습기회",
+    "signals": [
+      "지원 소요 지수: 48점",
+      "교육 수요 신호: 58점",
+      "AI·SW 학습기회 보강 신호: 88점"
+    ],
+    "weakFactors": [
+      "AI·SW 학습기회"
+    ],
+    "recommendedSupports": [
+      "AI·SW 학습기회 보강 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 8
+    },
+    "raw": {
+      "educationDemand": 58,
+      "teacherOperation": 52,
+      "digitalAccess": 10,
+      "aiLearningOpportunity": 88,
+      "regionalAccess": 25
+    }
+  },
+  {
+    "schoolId": "7051212",
+    "schoolName": "한천중학교",
+    "score": 38,
+    "level": "medium",
+    "type": "일반 모니터링",
+    "signals": [
+      "지원 소요 지수: 38점",
+      "교육 수요 신호: 55점",
+      "AI·SW 학습기회 보강 신호: 29점"
+    ],
+    "weakFactors": [],
+    "recommendedSupports": [
+      "공개자료 기반 일반 모니터링",
+      "AIDT·LMS 추가자료 연계 시 확장진단 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 9
+    },
+    "raw": {
+      "educationDemand": 55,
+      "teacherOperation": 47,
+      "digitalAccess": 24,
+      "aiLearningOpportunity": 29,
+      "regionalAccess": 25
+    }
+  },
+  {
+    "schoolId": "7010261",
+    "schoolName": "혜성여자고등학교",
+    "score": 43,
+    "level": "medium",
+    "type": "교육 수요·취약 여건",
+    "signals": [
+      "지원 소요 지수: 43점",
+      "교육 수요 신호: 69점",
+      "AI·SW 학습기회 보강 신호: 35점"
+    ],
+    "weakFactors": [
+      "교육 수요·취약 여건"
+    ],
+    "recommendedSupports": [
+      "교육 수요·취약 여건 보강 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 9
+    },
+    "raw": {
+      "educationDemand": 69,
+      "teacherOperation": 38,
+      "digitalAccess": 25,
+      "aiLearningOpportunity": 35,
+      "regionalAccess": 43
+    }
+  },
+  {
+    "schoolId": "7051173",
+    "schoolName": "화랑초등학교",
+    "score": 37,
+    "level": "medium",
+    "type": "교육 수요·취약 여건",
+    "signals": [
+      "지원 소요 지수: 37점",
+      "교육 수요 신호: 62점",
+      "AI·SW 학습기회 보강 신호: 23점"
+    ],
+    "weakFactors": [
+      "교육 수요·취약 여건"
+    ],
+    "recommendedSupports": [
+      "교육 수요·취약 여건 보강 검토"
+    ],
+    "dataReliability": {
+      "grade": "A",
+      "label": "공개자료 충분",
+      "missingCoreCount": 0,
+      "directFieldCount": 3,
+      "proxyFieldCount": 9
+    },
+    "raw": {
+      "educationDemand": 62,
+      "teacherOperation": 38,
+      "digitalAccess": 32,
+      "aiLearningOpportunity": 23,
+      "regionalAccess": 19
+    }
+  }
+]

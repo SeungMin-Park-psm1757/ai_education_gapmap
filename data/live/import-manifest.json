@@ -1,0 +1,38 @@
+[
+  {
+    "outputName": "schoolinfo-public.raw.json",
+    "status": "preserved-api-output"
+  },
+  {
+    "outputName": "edu-stats.raw.json",
+    "status": "preserved-api-output"
+  },
+  {
+    "outputName": "school-facility.raw.json",
+    "status": "preserved-api-output"
+  },
+  {
+    "outputName": "digital-infra.raw.json",
+    "status": "preserved-api-output"
+  },
+  {
+    "outputName": "ai-program.raw.json",
+    "status": "preserved-api-output"
+  },
+  {
+    "outputName": "teacher-training.raw.json",
+    "status": "preserved-api-output"
+  },
+  {
+    "outputName": "ai-centers.raw.json",
+    "status": "preserved-api-output"
+  },
+  {
+    "outputName": "sw-ai-camps.raw.json",
+    "status": "preserved-api-output"
+  },
+  {
+    "outputName": "public-learning-centers.raw.json",
+    "status": "preserved-api-output"
+  }
+]

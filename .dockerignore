@@ -1,0 +1,8 @@
+node_modules
+.next
+.env
+.env.local
+data/raw
+data/tmp
+npm-debug.log
+.git
