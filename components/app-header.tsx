@@ -3,7 +3,7 @@ import Link from "next/link";
 const navItems = [
   { href: "/", label: "홈" },
   { href: "/map", label: "격차지도" },
-  { href: "/priorities", label: "다음 조치" },
+  { href: "/priorities", label: "조치 방안" },
   { href: "/data", label: "데이터" }
 ];
 

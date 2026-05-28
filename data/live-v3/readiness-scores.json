@@ -2262,7 +2262,7 @@
     ],
     "dataReliability": {
       "grade": "B",
-      "label": "일부 대리지표",
+      "label": "일부 대체지표 사용",
       "missingCoreCount": 1,
       "directFieldCount": 0,
       "proxyFieldCount": 3

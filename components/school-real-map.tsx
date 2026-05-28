@@ -117,7 +117,7 @@ function markerHtml(point: RealMapPoint) {
 }
 
 function popupHtml(point: RealMapPoint) {
-  const weakFactors = point.weakFactors.slice(0, 3).map(escapeHtml).join(", ") || "보강 신호 없음";
+  const weakFactors = point.weakFactors.slice(0, 3).map(escapeHtml).join(", ") || "추가 보강 항목 없음";
   const detailHref = `/schools/${encodeURIComponent(point.schoolId)}`;
 
   return `

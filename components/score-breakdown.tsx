@@ -38,7 +38,7 @@ function reasonFor(key: keyof ReadinessScore["raw"], score: ReadinessScore, scho
       (school.studentWelfareRoomCount ?? 0);
     return `${sourcePrefix}학교알리미 시설 공시의 일반·교과·학습지원·학생복지 공간 ${
       facilityTotal || "미확인"
-    }개와 디지털 인프라 대리지표를 반영했습니다. 점수가 높을수록 보강 검토가 필요합니다.`;
+    }개와 디지털 인프라 대체지표(공개자료 기반)를 반영했습니다.`;
   }
 
   if (key === "aiLearningOpportunity") {
@@ -46,11 +46,11 @@ function reasonFor(key: keyof ReadinessScore["raw"], score: ReadinessScore, scho
       school.afterSchoolProgramCount?.toLocaleString() ?? "미확인"
     }개, 참여 학생 ${
       school.afterSchoolStudentCount?.toLocaleString() ?? "미확인"
-    }명 등 공개자료상 학습기회 신호를 사용했습니다.`;
+    }명 등 공개자료상 학습기회 여건을 사용했습니다.`;
   }
 
   if (score.raw.regionalAccess >= 60) {
-    return "학교 안팎의 지원공간, 학생선택 활동, 지역 학습자원 접근 신호가 약해 지역 연계 지원을 우선 검토할 수 있습니다.";
+    return "학교 안팎의 지원공간, 학생선택 활동, 지역 학습자원 접근성이 낮아 지역 연계 지원을 우선 검토할 수 있습니다.";
   }
   return `${sourcePrefix}지역 AI·SW 센터와 학교 내 상담·학습지원 공간, 방과후·학생선택 활동 접근 신호를 함께 반영했습니다.`;
 }
@@ -67,33 +67,21 @@ export function ScoreBreakdown({ score, school }: { score: ReadinessScore; schoo
     { key: "aiLearningOpportunity", label: "AI·SW 학습기회", weight: SUPPORT_PRIORITY_WEIGHTS.aiLearningOpportunity },
     { key: "regionalAccess", label: "지역 지원 접근성", weight: SUPPORT_PRIORITY_WEIGHTS.regionalAccess }
   ];
-  const totalContribution = rows.reduce((total, row) => total + (score.raw[row.key] / 100) * row.weight, 0);
-  const reliability = score.dataReliability;
 
   return (
     <section className="mt-8 rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
       <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
         <div>
-          <p className="text-sm font-black text-blue-700">공개자료형 점수</p>
+          <p className="text-sm font-black text-blue-700">점수산정 기준 및 결과</p>
           <h2 className="mt-2 text-2xl font-black text-slate-950">왜 {score.score}점인가</h2>
-          <p className="mt-2 text-sm leading-6 text-slate-600">
-            지원 소요 지수는 공개자료상 AI 교육 지원이 먼저 필요한 정도를 보여줍니다. 데이터 신뢰도는 총점에 넣지 않고 별도로 표시합니다.
-          </p>
           {school.dataSourceNote ? <p className="mt-2 text-xs font-bold leading-5 text-slate-500">{school.dataSourceNote}</p> : null}
-        </div>
-        <div className="rounded-lg bg-slate-50 px-4 py-3 text-right">
-          <p className="text-xs font-bold text-slate-500">총점 산출</p>
-          <p className="mt-1 text-xl font-black text-slate-950">
-            {totalContribution.toFixed(1)}점 → {score.score}점
-          </p>
-          {reliability ? <p className="mt-1 text-xs font-bold text-slate-500">신뢰도 {reliability.grade} · {reliability.label}</p> : null}
         </div>
       </div>
 
       <div className="mt-5 overflow-hidden rounded-lg border border-slate-200">
         <div className="hidden grid-cols-[190px_120px_120px_minmax(0,1fr)] bg-slate-50 px-4 py-3 text-xs font-black text-slate-500 md:grid">
-          <span>지수</span>
-          <span>지원 소요</span>
+          <span>지수열</span>
+          <span>점수(100점)</span>
           <span>반영 점수</span>
           <span>판단 이유</span>
         </div>

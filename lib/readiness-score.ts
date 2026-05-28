@@ -59,7 +59,7 @@ function getDataReliability(school: SchoolProfile): ReadinessScore["dataReliabil
 
   return {
     grade,
-    label: grade === "A" ? "공개자료 충분" : grade === "B" ? "일부 대리지표" : "현장 확인 우선",
+    label: grade === "A" ? "공개자료 충분" : grade === "B" ? "일부 대체지표 사용" : "현장 확인 우선",
     missingCoreCount,
     directFieldCount: directFields,
     proxyFieldCount: proxyFields
@@ -163,7 +163,7 @@ export function calculateReadinessScore(school: SchoolProfile): ReadinessScore {
     signals: [
       `지원 소요 지수: ${score}점`,
       `교육 수요 신호: ${educationDemand}점`,
-      `AI·SW 학습기회 보강 신호: ${aiLearningOpportunity}점`
+      `AI·SW 학습기회 보강 필요: ${aiLearningOpportunity}점`
     ],
     weakFactors,
     recommendedSupports,

@@ -131,7 +131,7 @@ export function GapMap({
     { label: "지원 필요사항 검토", count: scores.filter((score) => score.level === "medium").length, dot: "bg-orange-500" },
     { label: "일반 모니터링", count: scores.filter((score) => score.level === "high").length, dot: "bg-blue-600" },
     { label: "현장 확인 우선", count: fieldCheckCount, dot: "bg-slate-400" }
-  ];
+  ].filter((bucket) => bucket.count > 0);
   const regionLabel = getRegionLabel();
   const anonymized = isAnonymizeMode();
   const publicDataSources = manifest.publicDataSources?.length
@@ -139,7 +139,7 @@ export function GapMap({
     : [
         { name: "NEIS 학교 기본정보", count: schools.length, fields: ["학교명", "학교급", "교육지원청", "주소"] },
         { name: "학교알리미 공시자료", count: scores.length, fields: ["학생 수", "교원 수", "학급 수", "시설·프로그램"] },
-        { name: "공공데이터포털 전국초중등학교위치표준데이터", count: coordinateCount, fields: ["학교 주소", "위치 기준점"] }
+        { name: "공공데이터포털 학교 표준자료", count: coordinateCount, fields: ["학교명", "주소 대조", "기관 구분"] }
       ];
   const publicRecordCount = manifest.counts?.actualPublicRecords ?? publicDataSources.reduce((total, source) => total + source.count, 0);
   const temporaryDataSources = manifest.temporaryDataSources?.length
@@ -182,13 +182,13 @@ export function GapMap({
               </div>
               <h2 className="mt-3 text-2xl font-black text-slate-950">지원 소요 분포</h2>
               <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">
-                점수가 높을수록 좋은 것이 아니라, 공개자료상 지원 필요 신호가 크다는 뜻입니다.
+                점수가 높을수록 AI교육을 위한 우선 지원이 필요합니다.
               </p>
             </div>
             <div className="grid grid-cols-2 gap-2 text-sm sm:grid-cols-4 lg:min-w-[430px]">
               {[
                 ["학교", scores.length],
-                ["좌표", coordinateCount],
+                ["가상 배치", scores.length],
                 ["평균", average(scores)],
                 ["임시", manifest.counts?.schoolAdditionalData ?? scores.length]
               ].map(([label, value]) => (
@@ -293,7 +293,7 @@ export function GapMap({
               지원 소요 지수가 높은 학교부터 지원소요와 조치를 제안합니다.
             </p>
           </div>
-          <div className="hidden border-b border-slate-200 bg-slate-50 px-5 py-3 text-xs font-black text-slate-500 md:grid md:grid-cols-[90px_minmax(0,1fr)_220px]">
+          <div className="hidden border-b border-slate-200 bg-slate-50 px-5 py-3 text-xs font-black text-slate-500 md:grid md:grid-cols-[86px_minmax(0,0.65fr)_minmax(420px,1.25fr)]">
             <span>지원소요</span>
             <span>학교·지원요소</span>
             <span>제안 조치</span>
@@ -303,7 +303,7 @@ export function GapMap({
               <Link
                 href={`/schools/${item.schoolId}`}
                 key={`detail-${item.schoolId}`}
-                className="grid gap-3 px-5 py-4 hover:bg-slate-50 md:grid-cols-[90px_minmax(0,1fr)_220px]"
+                className="grid gap-3 px-5 py-4 hover:bg-slate-50 md:grid-cols-[86px_minmax(0,0.65fr)_minmax(420px,1.25fr)]"
               >
                 <div>
                   <p className="text-xs font-bold text-slate-500">지원 소요</p>
@@ -368,9 +368,8 @@ export function GapMap({
               {[
                 ["지원 소요 산출", scores.length],
                 ["우선지원 필요", attentionCount],
-                ["현장 확인", fieldCheckCount],
                 ["점수 범위", `${minScore}-${maxScore}`]
-              ].map(([label, value]) => (
+              ].filter(([label]) => label !== "현장 확인" || fieldCheckCount > 0).map(([label, value]) => (
                 <div key={label} className="flex items-center justify-between text-sm">
                   <span className="font-bold text-slate-600">{label}</span>
                   <span className="font-black text-slate-950">{value}</span>

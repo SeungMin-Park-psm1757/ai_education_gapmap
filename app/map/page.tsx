@@ -16,7 +16,7 @@ export default function MapPage() {
       <SectionHeader
         eyebrow="AI 교육격차 지도"
         title={`${regionLabel} 지원 소요 지도`}
-        description="이 화면에서는 우선지원 필요 TOP 3, 현장 확인 우선 대상, 점수 방향을 먼저 확인합니다."
+        description="이 화면에서는 우선지원 필요 TOP 3, 지도 분포, 데이터 근거를 확인합니다."
       />
       {!hasData ? <DataRequired /> : null}
       {hasData ? <GapMap scores={scores} schools={schools} manifest={manifest} /> : null}

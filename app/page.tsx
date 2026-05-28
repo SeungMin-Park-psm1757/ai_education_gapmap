@@ -51,11 +51,15 @@ export default function HomePage() {
             </div>
           </section>
 
-          <div className="grid gap-4 md:grid-cols-4">
-            <MetricCard label="분석 학교" value={schools.length} helper={`${regionLabel} 공개자료 기준`} />
-            <MetricCard label="우선지원 필요" value={scores.filter((s) => s.level === "attention").length} />
-            <MetricCard label="지원 필요사항 검토" value={scores.filter((s) => s.level === "medium").length} />
-            <MetricCard label="현장 확인" value={scores.filter((s) => s.level === "field_check").length} />
+          <div className="grid gap-4 md:grid-cols-3">
+            {[
+              { label: "분석 학교", value: schools.length, helper: `${regionLabel} 공개자료 기준` },
+              { label: "우선지원 필요", value: scores.filter((s) => s.level === "attention").length },
+              { label: "지원 필요사항 검토", value: scores.filter((s) => s.level === "medium").length },
+              { label: "현장 확인", value: scores.filter((s) => s.level === "field_check").length }
+            ].filter((metric) => metric.label !== "현장 확인" || metric.value > 0).map((metric) => (
+              <MetricCard key={metric.label} label={metric.label} value={metric.value} helper={metric.helper} />
+            ))}
           </div>
 
           <section className="mt-8 rounded-lg border border-slate-200 bg-white p-6 shadow-soft">
@@ -65,7 +69,7 @@ export default function HomePage() {
                 AI 교육격차 지도로 확인
               </Link>
               <Link href="/priorities" className="rounded-xl border border-slate-200 bg-white px-5 py-3 text-sm font-black text-slate-700">
-                다음 조치 보기
+                조치 방안 보기
               </Link>
             </div>
           </section>

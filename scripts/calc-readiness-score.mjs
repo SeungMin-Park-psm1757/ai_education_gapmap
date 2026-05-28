@@ -300,7 +300,7 @@ function getDataReliability(school) {
 
   return {
     grade,
-    label: grade === "A" ? "공개자료 충분" : grade === "B" ? "일부 대리지표" : "현장 확인 우선",
+    label: grade === "A" ? "공개자료 충분" : grade === "B" ? "일부 대체지표 사용" : "현장 확인 우선",
     missingCoreCount,
     directFieldCount,
     proxyFieldCount
@@ -390,7 +390,7 @@ function calc(school) {
     signals: [
       `지원 소요 지수: ${score}점`,
       `교육 수요 신호: ${educationDemand}점`,
-      `AI·SW 학습기회 보강 신호: ${aiLearningOpportunity}점`
+      `AI·SW 학습기회 보강 필요: ${aiLearningOpportunity}점`
     ],
     weakFactors,
     recommendedSupports: weakFactors.length ? weakFactors.map((f) => `${f} 보강 검토`) : ["AI·SW 프로그램 운영 현황 유지 점검", "필요 시 학교 추가자료로 지원소요 재확인"],
@@ -417,7 +417,7 @@ writeJson(path.join(liveDir, "manifest.json"), {
   warnings: [
     ...(manifest.warnings ?? []),
     ...(schoolInfo.length === 0 ? ["학교알리미 또는 실제 학교 공시 CSV가 없어 학생·교원 지표가 제한됩니다."] : []),
-    ...(!hasAiProgramSignals ? ["AI 교육 운영 공개자료가 없어 AI 프로그램 신호가 제한됩니다."] : [])
+    ...(!hasAiProgramSignals ? ["AI 교육 운영 공개자료가 없어 AI 프로그램 확인 범위가 제한됩니다."] : [])
   ]
 });
 

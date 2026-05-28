@@ -89,7 +89,7 @@ function countRows(fileName) {
 const publicDataSources = [
   { name: "NEIS 학교 기본정보", count: countRows("neis-schools.raw.json"), fields: ["학교명", "학교급", "교육지원청", "주소"] },
   { name: "학교알리미 공시자료", count: countRows("schoolinfo-public.raw.json"), fields: ["학생 수", "교원 수", "학급 수", "시설·프로그램"] },
-  { name: "공공데이터포털 전국초중등학교위치표준데이터", count: countRows("school-location-standard.raw.json"), fields: ["학교 주소", "위치 기준점"] }
+  { name: "공공데이터포털 학교 표준자료", count: countRows("school-location-standard.raw.json"), fields: ["학교명", "주소 대조", "기관 구분"] }
 ].filter((source) => source.count > 0);
 
 const schoolAdditionalData = schools.map((school, index) => {
@@ -144,7 +144,7 @@ const scores = publicScores.map((score) => {
     (raw.regionalAccess / 100) * weights.regionalAccess;
 
   const reliabilityGrade = score.dataReliability?.grade ?? "B";
-  const reliabilityLabel = score.dataReliability?.label ?? (reliabilityGrade === "A" ? "공개자료 충분" : "일부 대리지표");
+  const reliabilityLabel = score.dataReliability?.label ?? (reliabilityGrade === "A" ? "공개자료 충분" : "일부 대체지표 사용");
   const schoolDataAdjustment = 6;
   const scoreValue = clamp(calculated + schoolDataAdjustment);
 

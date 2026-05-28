@@ -13,9 +13,8 @@ export default function PrioritiesPage() {
   return (
     <div>
       <SectionHeader
-        eyebrow="지원 우선순위"
-        title="먼저 볼 학교와 다음 조치"
-        description="점수가 높을수록 AI교육을 위한 지원이 필요합니다. 신뢰도 C는 현장 확인 우선으로 분리합니다."
+        title="지원 우선순위"
+        description="점수가 높을수록 AI교육을 위한 우선 지원이 필요합니다."
       />
       {!hasData ? <DataRequired /> : null}
       {hasData ? (
@@ -49,7 +48,7 @@ export default function PrioritiesPage() {
                   </div>
                   <div className="mt-3 space-y-1 text-sm leading-6 text-slate-600">
                     <p><span className="font-black text-slate-800">왜: </span>{action.why}</p>
-                    <p><span className="font-black text-slate-800">조치: </span>{action.action}</p>
+                    <p><span className="font-black text-slate-800">조치 방안: </span>{action.action}</p>
                     <p><span className="font-black text-slate-800">추가자료: </span>{action.requiredData}</p>
                   </div>
                   <span className="mt-4 inline-flex text-sm font-black text-blue-700">상세 보기</span>

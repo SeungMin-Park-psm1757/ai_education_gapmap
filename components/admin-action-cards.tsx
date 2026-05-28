@@ -9,10 +9,10 @@ export function AdminActionCards({ score }: { score: ReadinessScore }) {
       <div className="mb-4 flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
         <div>
           <p className="text-sm font-black text-blue-700">실행 연결</p>
-          <h2 className="text-2xl font-black text-slate-950">다음 행정 조치</h2>
+          <h2 className="text-2xl font-black text-slate-950">행정 조치 방안</h2>
         </div>
         <p className="max-w-xl text-sm leading-6 text-slate-600">
-          공개자료 기반 1차 신호를 예산·연수·프로그램·현장 확인으로 연결합니다.
+          산출 결과를 예산·연수·프로그램·자료 보완으로 연결합니다.
         </p>
       </div>
       <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
