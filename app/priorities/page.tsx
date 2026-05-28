@@ -49,7 +49,7 @@ export default function PrioritiesPage() {
                   <div className="mt-3 space-y-1 text-sm leading-6 text-slate-600">
                     <p><span className="font-black text-slate-800">왜: </span>{action.why}</p>
                     <p><span className="font-black text-slate-800">조치 방안: </span>{action.action}</p>
-                    <p><span className="font-black text-slate-800">추가자료: </span>{action.requiredData}</p>
+                    <p><span className="font-black text-slate-800">필요한 추가자료: </span>{action.requiredData}</p>
                   </div>
                   <span className="mt-4 inline-flex text-sm font-black text-blue-700">상세 보기</span>
                 </Link>

@@ -90,5 +90,25 @@ export type DataManifest = {
     count: number;
     fields?: string[];
   }[];
+  scenarioDataSources?: {
+    name: string;
+    count: number;
+    fields?: string[];
+    isIncludedInMainScore?: false;
+  }[];
   counts?: Record<string, number>;
+};
+
+export type ScenarioDiagnosis = {
+  schoolId: string;
+  mode: "scenario";
+  label: "확장진단 시나리오";
+  description: string;
+  aidtAccessStability?: number;
+  lmsUsageContinuity?: number;
+  teacherTrainingCompletion?: number;
+  deviceAccessibility?: number;
+  aiSwProgramOperation?: number;
+  externalProgramAccessibility?: number;
+  isIncludedInMainScore: false;
 };

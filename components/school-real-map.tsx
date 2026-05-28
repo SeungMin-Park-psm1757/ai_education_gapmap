@@ -278,7 +278,7 @@ export function SchoolRealMap({ points }: { points: RealMapPoint[] }) {
       <div ref={containerRef} className="h-full w-full" aria-label="학교별 AI 교육 지원 소요 실제 지도" />
       {isAnonymousMap ? (
         <div className="pointer-events-none absolute bottom-4 right-4 rounded-md bg-white/95 px-3 py-2 text-xs font-bold text-slate-600 shadow-sm">
-          학교 위치는 가상의 위치입니다.
+          제출용 화면에서는 학교 위치를 가상 배치했습니다.
         </div>
       ) : null}
       {error ? (

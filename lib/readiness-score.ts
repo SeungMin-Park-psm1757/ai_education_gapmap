@@ -72,8 +72,8 @@ export function isFieldCheckFirst(score: Pick<ReadinessScore, "dataReliability">
 
 export function getLevelLabel(score: number, reliability?: ReadinessScore["dataReliability"]) {
   if (reliability?.grade === "C") return "현장 확인 우선";
-  if (score >= 45) return "우선지원 필요";
-  if (score >= 30) return "지원 필요사항 검토";
+  if (score >= 45) return "우선 지원 검토";
+  if (score >= 30) return "보완 검토";
   return "일반 모니터링";
 }
 

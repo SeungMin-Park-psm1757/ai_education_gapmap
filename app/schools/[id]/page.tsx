@@ -18,7 +18,7 @@ export default function SchoolDetailPage({ params }: { params: { id: string } })
       <SectionHeader
         eyebrow="학교 상세 보고서"
         title={`${school.schoolName} 지원 소요 보고서`}
-        description="점수가 높을수록 AI교육 지원 검토가 필요합니다. 이 화면에서는 근거, 신뢰도, 조치 방안을 확인합니다."
+        description="공개자료 기반 점수 근거, 데이터 신뢰도, 조치 방안을 확인합니다."
       />
       <div className="grid gap-6 lg:grid-cols-[380px_1fr]">
         <ReadinessScoreCard score={score} />
@@ -26,7 +26,7 @@ export default function SchoolDetailPage({ params }: { params: { id: string } })
           <h2 className="text-xl font-black text-slate-950">학교 기본정보</h2>
           {anonymized ? (
             <p className="mt-2 rounded-md bg-blue-50 px-3 py-2 text-sm font-bold text-blue-800">
-              공모전 제출을 위해 익명화되어 개별 학교 식별정보는 표시하지 않습니다.
+              공모전 제출을 위해 학교명과 위치는 익명화했습니다.
             </p>
           ) : null}
           <dl className="mt-4 grid gap-x-8 gap-y-5 text-sm md:grid-cols-2">
@@ -53,7 +53,7 @@ export default function SchoolDetailPage({ params }: { params: { id: string } })
                   <dd className="mt-1 leading-6 text-slate-950">{school.phone ?? "-"}</dd>
                 </div>
                 <div className="min-w-0">
-                  <dt className="font-bold text-slate-500">홈페이지</dt>
+                  <dt className="font-bold text-slate-500">웹사이트</dt>
                   <dd className="mt-1 truncate leading-6">
                     {school.homepage ? <a className="text-blue-700" href={school.homepage}>{school.homepage}</a> : "-"}
                   </dd>
@@ -71,7 +71,7 @@ export default function SchoolDetailPage({ params }: { params: { id: string } })
           <p className="text-sm font-black text-slate-700">현장 확인 우선</p>
           <h2 className="mt-2 text-2xl font-black text-slate-950">데이터 보완이 먼저 필요합니다</h2>
           <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">
-            이 학교는 지원 소요 지수보다 데이터 보완이 먼저 필요합니다. 교육지원청 현장 확인 또는 학교 추가자료 요청을 권장합니다.
+            이 학교는 지원 소요 지수보다 데이터 보완이 먼저 필요합니다. 교육지원청 확인 또는 학교 추가자료 요청을 권장합니다.
           </p>
         </section>
       ) : null}

@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 
-const roots = ["app", "components", "lib", "README.md", "START_HERE.md", "reports"];
+const roots = ["app", "components", "lib", "README.md", "START_HERE.md", ".env.example", "reports"];
 const ignoredFiles = new Set([
   path.normalize("docs/COPY_GUIDE.md"),
   path.normalize("docs/MVP_STRUCTURE_REVIEW.md"),
@@ -17,8 +17,16 @@ const risky = [
   "AI가 판단",
   "확정 추천",
   "실제 수업 수준",
+  "실제 수업 수준 확정",
+  "실제 학교 제출자료",
+  "임의 데이터 반영 완료",
+  "임의 학교데이터 기반 결론",
   "우수 학교",
   "열악 학교",
+  "학교 순위",
+  "실명 학교",
+  "전화번호",
+  "홈페이지",
   "지원우선 지수",
   "지원우선",
   "집중 지원",
@@ -40,7 +48,15 @@ const allowedContext = [
   "기술 문서 병기",
   "지원 소요 지수(기존 지원우선 지수)",
   "학교 평가가 아니라 지원 소요 진단",
-  "학교 평가가 아니라 AI 교육 지원 소요 진단"
+  "학교 평가가 아니라 AI 교육 지원 소요 진단",
+  "표시하지 않습니다",
+  "표시하지 않는다",
+  "표시하지 않음",
+  "미노출",
+  "노출되지 않는다",
+  "익명화",
+  "개인정보·식별정보 처리",
+  "실제 학교 제출자료가 아니라"
 ];
 
 const findings = [];

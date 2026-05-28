@@ -29,7 +29,7 @@ function getBucket(score: ReadinessScore) {
   }
   if (score.score >= 45) {
     return {
-      label: "우선지원 필요",
+      label: "우선 지원 검토",
       color: "#dc2626",
       bg: "bg-red-50",
       text: "text-red-700",
@@ -38,7 +38,7 @@ function getBucket(score: ReadinessScore) {
   }
   if (score.score >= 30) {
     return {
-      label: "지원 필요사항 검토",
+      label: "보완 검토",
       color: "#ea580c",
       bg: "bg-orange-50",
       text: "text-orange-700",
@@ -127,8 +127,8 @@ export function GapMap({
   const maxScore = sorted[0]?.score ?? 0;
   const minScore = sorted[sorted.length - 1]?.score ?? 0;
   const scoreBuckets = [
-    { label: "우선지원 필요", count: scores.filter((score) => score.level === "attention").length, dot: "bg-red-600" },
-    { label: "지원 필요사항 검토", count: scores.filter((score) => score.level === "medium").length, dot: "bg-orange-500" },
+    { label: "우선 지원 검토", count: scores.filter((score) => score.level === "attention").length, dot: "bg-red-600" },
+    { label: "보완 검토", count: scores.filter((score) => score.level === "medium").length, dot: "bg-orange-500" },
     { label: "일반 모니터링", count: scores.filter((score) => score.level === "high").length, dot: "bg-blue-600" },
     { label: "현장 확인 우선", count: fieldCheckCount, dot: "bg-slate-400" }
   ].filter((bucket) => bucket.count > 0);
@@ -137,21 +137,13 @@ export function GapMap({
   const publicDataSources = manifest.publicDataSources?.length
     ? manifest.publicDataSources
     : [
-        { name: "NEIS 학교 기본정보", count: schools.length, fields: ["학교명", "학교급", "교육지원청", "주소"] },
-        { name: "학교알리미 공시자료", count: scores.length, fields: ["학생 수", "교원 수", "학급 수", "시설·프로그램"] },
-        { name: "공공데이터포털 학교 표준자료", count: coordinateCount, fields: ["학교명", "주소 대조", "기관 구분"] }
+        { name: "NEIS 학교 기본정보", count: manifest.counts?.neisSchools ?? schools.length, fields: ["학교명", "학교급", "교육지원청", "주소"] },
+        { name: "학교알리미 공시자료", count: manifest.counts?.schoolInfo ?? scores.length, fields: ["학생 수", "교원 수", "학급 수", "시설·프로그램"] },
+        { name: "공공데이터포털 학교 표준자료", count: manifest.counts?.schoolLocationStandard ?? coordinateCount, fields: ["학교명", "주소 대조", "기관 구분"] }
       ];
   const publicRecordCount = manifest.counts?.actualPublicRecords ?? publicDataSources.reduce((total, source) => total + source.count, 0);
-  const temporaryDataSources = manifest.temporaryDataSources?.length
-    ? manifest.temporaryDataSources
-    : [
-        {
-          name: "학교 제공 추가자료 예시",
-          count: manifest.counts?.schoolAdditionalData ?? scores.length,
-          fields: ["AI 디지털교과서(AIDT) 접속 안정성", "학습관리시스템(LMS) 사용 지속성", "교원 연수 이수", "기기 접근성", "AI·SW 프로그램 운영", "외부 AI프로그램 접근성"]
-        }
-      ];
-  const temporaryRecordCount = temporaryDataSources.reduce((total, source) => total + source.count, 0);
+  const scenarioDataSources = manifest.scenarioDataSources ?? [];
+  const scenarioRecordCount = scenarioDataSources.reduce((total, source) => total + source.count, 0);
 
   return (
     <div className="space-y-8">
@@ -163,7 +155,7 @@ export function GapMap({
             className="rounded-lg border border-slate-200 bg-white p-5 shadow-soft hover:border-slate-400"
           >
             <div className="flex items-center justify-between gap-3">
-              <span className="rounded-md bg-red-50 px-2.5 py-1 text-xs font-black text-red-700">우선지원 필요 TOP {index + 1}</span>
+              <span className="rounded-md bg-red-50 px-2.5 py-1 text-xs font-black text-red-700">우선 지원 검토 TOP {index + 1}</span>
               <span className="text-2xl font-black text-slate-950">{item.score}</span>
             </div>
             <h2 className="mt-3 truncate text-lg font-black text-slate-950">{item.schoolName}</h2>
@@ -182,7 +174,7 @@ export function GapMap({
               </div>
               <h2 className="mt-3 text-2xl font-black text-slate-950">지원 소요 분포</h2>
               <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">
-                점수가 높을수록 AI교육을 위한 우선 지원이 필요합니다.
+                점수가 높을수록 공개자료상 지원이 먼저 필요한 신호가 큽니다.
               </p>
             </div>
             <div className="grid grid-cols-2 gap-2 text-sm sm:grid-cols-4 lg:min-w-[430px]">
@@ -190,7 +182,7 @@ export function GapMap({
                 ["학교", scores.length],
                 ["가상 배치", scores.length],
                 ["평균", average(scores)],
-                ["임의", manifest.counts?.schoolAdditionalData ?? scores.length]
+                ["우선 지원", attentionCount]
               ].map(([label, value]) => (
                 <div key={label} className="rounded-md bg-slate-50 px-3 py-2">
                   <p className="text-xs font-bold text-slate-500">{label}</p>
@@ -346,13 +338,17 @@ export function GapMap({
                 ))}
               </ul>
             </div>
+            {scenarioDataSources.length ? (
             <div className="border-b border-slate-100 pb-4">
               <div className="flex items-center justify-between gap-3 text-sm">
-                <span className="font-bold text-slate-600">임의데이터 구축</span>
-                <span className="font-black text-slate-950">{temporaryRecordCount}건</span>
+                <span className="font-bold text-slate-600">확장진단 시나리오</span>
+                <span className="font-black text-slate-950">{scenarioRecordCount}건</span>
               </div>
+              <p className="mt-2 text-xs font-bold leading-5 text-slate-500">
+                실제 학교 제출자료가 아니라 추가자료 제공 시 가능한 분석 구조 예시이며, 메인 지원 소요 지수에는 반영하지 않습니다.
+              </p>
               <ul className="mt-3 space-y-1 text-sm leading-6 text-slate-600">
-                {temporaryDataSources.map((source) => (
+                {scenarioDataSources.map((source) => (
                   <li key={source.name}>
                     <p>* {source.name}</p>
                     <div className="mt-1 space-y-1 pl-3">
@@ -364,10 +360,11 @@ export function GapMap({
                 ))}
               </ul>
             </div>
+            ) : null}
             <div className="space-y-3">
               {[
                 ["지원 소요 산출", scores.length],
-                ["우선지원 필요", attentionCount],
+                ["우선 지원 검토", attentionCount],
                 ["점수 범위", `${minScore}-${maxScore}`]
               ].filter(([label]) => label !== "현장 확인" || fieldCheckCount > 0).map(([label, value]) => (
                 <div key={label} className="flex items-center justify-between text-sm">
