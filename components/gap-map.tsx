@@ -84,15 +84,21 @@ function getGradeGroups(schools: SchoolProfile[]) {
   const groups = new Map<string, number>();
   schools.forEach((school) => {
     const label = school.schoolLevel?.includes("초등")
-      ? "초등"
+      ? "초등학교"
       : school.schoolLevel?.includes("중")
-        ? "중등"
+        ? "중학교"
         : school.schoolLevel?.includes("고등")
-          ? "고등"
+          ? "고등학교"
           : "기타";
     groups.set(label, (groups.get(label) ?? 0) + 1);
   });
-  return ["초등", "중등", "고등", "기타"].map((label) => ({ label, count: groups.get(label) ?? 0 }));
+  const otherCount = groups.get("기타") ?? 0;
+  return [
+    { label: "초등학교", count: groups.get("초등학교") ?? 0 },
+    { label: "중학교", count: groups.get("중학교") ?? 0 },
+    { label: "고등학교", count: groups.get("고등학교") ?? 0 },
+    { label: `기타(${otherCount}학교)`, count: otherCount }
+  ];
 }
 
 function average(scores: ReadinessScore[]) {
@@ -131,9 +137,9 @@ export function GapMap({
   const publicDataSources = manifest.publicDataSources?.length
     ? manifest.publicDataSources
     : [
-        { name: "NEIS 학교 기본정보", count: schools.length },
-        { name: "학교알리미 공시자료", count: scores.length },
-        { name: "공공데이터포털 전국초중등학교위치표준데이터", count: coordinateCount }
+        { name: "NEIS 학교 기본정보", count: schools.length, fields: ["학교명", "학교급", "교육지원청", "주소"] },
+        { name: "학교알리미 공시자료", count: scores.length, fields: ["학생 수", "교원 수", "학급 수", "시설·프로그램"] },
+        { name: "공공데이터포털 전국초중등학교위치표준데이터", count: coordinateCount, fields: ["학교 주소", "위치 기준점"] }
       ];
   const publicRecordCount = manifest.counts?.actualPublicRecords ?? publicDataSources.reduce((total, source) => total + source.count, 0);
   const temporaryDataSources = manifest.temporaryDataSources?.length
@@ -281,11 +287,16 @@ export function GapMap({
           <div className="border-b border-slate-200 px-5 py-4">
             <div className="flex items-center gap-2">
               <School2 className="h-5 w-5 text-blue-700" aria-hidden="true" />
-              <h2 className="text-xl font-black text-slate-950">우선지원 필요 상세</h2>
+              <h2 className="text-xl font-black text-slate-950">AI교육여건 지원요소 상세</h2>
             </div>
             <p className="mt-2 text-sm leading-6 text-slate-600">
               지원 소요 지수가 높은 학교부터 지원소요와 조치를 제안합니다.
             </p>
+          </div>
+          <div className="hidden border-b border-slate-200 bg-slate-50 px-5 py-3 text-xs font-black text-slate-500 md:grid md:grid-cols-[90px_minmax(0,1fr)_220px]">
+            <span>지원소요</span>
+            <span>학교·지원요소</span>
+            <span>제안 조치</span>
           </div>
           <div className="divide-y divide-slate-100">
             {priorityItems.map((item) => (
@@ -313,7 +324,7 @@ export function GapMap({
                 </div>
                 <div className="text-sm leading-6 text-slate-600">
                   {item.recommendedSupports.slice(0, 2).map((support) => (
-                    <p key={support}>{support}</p>
+                    <p key={support}>· {support}</p>
                   ))}
                 </div>
               </Link>
@@ -331,7 +342,7 @@ export function GapMap({
               </div>
               <ul className="mt-3 space-y-1 text-sm leading-6 text-slate-600">
                 {publicDataSources.map((source) => (
-                  <li key={source.name}>* {source.name} {source.count}건</li>
+                  <li key={source.name}>* {source.name}: {source.fields?.join("·")} 등 {source.count}건</li>
                 ))}
               </ul>
             </div>
@@ -343,7 +354,12 @@ export function GapMap({
               <ul className="mt-3 space-y-1 text-sm leading-6 text-slate-600">
                 {temporaryDataSources.map((source) => (
                   <li key={source.name}>
-                    * {source.name}: {source.fields?.join(", ")}
+                    <p>* {source.name}</p>
+                    <div className="mt-1 space-y-1 pl-3">
+                      {source.fields?.map((field) => (
+                        <p key={field}>{field}</p>
+                      ))}
+                    </div>
                   </li>
                 ))}
               </ul>

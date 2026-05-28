@@ -69,14 +69,14 @@ function weakFactors(raw) {
 
 function recommendedSupports(raw, reliabilityGrade) {
   if (reliabilityGrade === "C") {
-    return ["학교 추가자료 보완 요청", "교육지원청 현장 확인 검토"];
+    return ["학교 추가자료 보완 요청", "교육지원청 현장 확인 추진 검토"];
   }
   const supports = [];
-  if (raw.digitalAccess >= 55) supports.push("디지털 학습공간·기기 현황 점검");
-  if (raw.teacherOperation >= 55) supports.push("AI 활용 수업 연수·컨설팅 검토");
-  if (raw.aiLearningOpportunity >= 55) supports.push("방과후 AI·SW 프로그램 연계 검토");
-  if (raw.regionalAccess >= 55) supports.push("지역 SW교육센터·외부 강사 연계 검토");
-  return supports.length ? supports : ["공개자료와 학교 추가자료 기반 일반 모니터링"];
+  if (raw.digitalAccess >= 55) supports.push("디지털 학습공간·기기 현황 점검 추진");
+  if (raw.teacherOperation >= 55) supports.push("AI 활용 수업 연수·컨설팅 추진 검토");
+  if (raw.aiLearningOpportunity >= 55) supports.push("방과후 AI·SW 프로그램 연계 추진 검토");
+  if (raw.regionalAccess >= 55) supports.push("지역 SW교육센터·외부 강사 연계 추진 검토");
+  return supports.length ? supports : ["AI·SW 프로그램 운영 현황 유지 점검", "필요 시 학교 추가자료로 지원소요 재확인"];
 }
 
 const publicScoreById = new Map(publicScores.map((score) => [score.schoolId, score]));
@@ -87,9 +87,9 @@ function countRows(fileName) {
 }
 
 const publicDataSources = [
-  { name: "NEIS 학교 기본정보", count: countRows("neis-schools.raw.json") },
-  { name: "학교알리미 공시자료", count: countRows("schoolinfo-public.raw.json") },
-  { name: "공공데이터포털 전국초중등학교위치표준데이터", count: countRows("school-location-standard.raw.json") }
+  { name: "NEIS 학교 기본정보", count: countRows("neis-schools.raw.json"), fields: ["학교명", "학교급", "교육지원청", "주소"] },
+  { name: "학교알리미 공시자료", count: countRows("schoolinfo-public.raw.json"), fields: ["학생 수", "교원 수", "학급 수", "시설·프로그램"] },
+  { name: "공공데이터포털 전국초중등학교위치표준데이터", count: countRows("school-location-standard.raw.json"), fields: ["학교 주소", "위치 기준점"] }
 ].filter((source) => source.count > 0);
 
 const schoolAdditionalData = schools.map((school, index) => {

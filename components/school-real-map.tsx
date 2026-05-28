@@ -218,6 +218,8 @@ export function SchoolRealMap({ points }: { points: RealMapPoint[] }) {
         const map = leaflet.map(containerRef.current, {
           scrollWheelZoom: false,
           zoomControl: true,
+          zoomDelta: 0.5,
+          zoomSnap: 0.5,
           preferCanvas: true
         });
 
@@ -247,7 +249,11 @@ export function SchoolRealMap({ points }: { points: RealMapPoint[] }) {
               .addTo(map)
               .bindPopup(popupHtml(point));
           });
-          map.fitBounds(leaflet.latLngBounds(latLngs), { padding: [28, 28], maxZoom: isAnonymousMap ? 13 : 15 });
+          if (isAnonymousMap) {
+            map.setView([37.65, 127.075], 12.5);
+          } else {
+            map.fitBounds(leaflet.latLngBounds(latLngs), { padding: [28, 28], maxZoom: 15 });
+          }
         } else {
           map.setView([37.654, 127.075], 13);
         }
@@ -271,8 +277,8 @@ export function SchoolRealMap({ points }: { points: RealMapPoint[] }) {
     <div className="relative h-[560px] min-h-[560px] w-full overflow-hidden bg-slate-100">
       <div ref={containerRef} className="h-full w-full" aria-label="학교별 AI 교육 지원 소요 실제 지도" />
       {isAnonymousMap ? (
-        <div className="pointer-events-none absolute bottom-4 left-4 right-4 rounded-lg bg-white/95 p-3 text-xs font-bold leading-5 text-slate-600 shadow-sm md:right-auto md:max-w-md">
-          실제 노원구 지도 배경을 사용하되, 마커 위치는 학교 실좌표가 아닌 임의 분포입니다.
+        <div className="pointer-events-none absolute bottom-4 right-4 rounded-md bg-white/95 px-3 py-2 text-xs font-bold text-slate-600 shadow-sm">
+          학교 위치는 가상의 위치입니다.
         </div>
       ) : null}
       {error ? (

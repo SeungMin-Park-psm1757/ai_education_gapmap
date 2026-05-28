@@ -83,6 +83,7 @@ export type DataManifest = {
   publicDataSources?: {
     name: string;
     count: number;
+    fields?: string[];
   }[];
   temporaryDataSources?: {
     name: string;

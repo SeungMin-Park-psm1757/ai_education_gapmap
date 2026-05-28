@@ -30,7 +30,7 @@ export function getAdminActions(score: ReadinessScore): AdminAction[] {
       {
         title: "연수 배정",
         why: "교원 지원 필요성은 추가 확인 후 판단해야 합니다.",
-        action: "AI 활용 수업 연수 및 수업설계 컨설팅 우선 배정 여부를 재검토하세요.",
+        action: "AI 활용 수업 연수 및 수업설계 컨설팅 추진 여부를 재검토하세요.",
         requiredData: "교원 연수 이력, 수업 활용 계획"
       },
       {
@@ -57,7 +57,7 @@ export function getAdminActions(score: ReadinessScore): AdminAction[] {
     actions.push({
       title: "연수 배정",
       why: "교원·운영 여건에서 수업 지원 필요 신호가 큽니다.",
-      action: "AI 활용 수업 연수 및 수업설계 컨설팅 우선 배정을 검토하세요.",
+      action: "AI 활용 수업 연수 및 수업설계 컨설팅 추진을 검토하세요.",
       requiredData: "교원 연수 이력, 희망 교과, 컨설팅 수요"
     });
   }

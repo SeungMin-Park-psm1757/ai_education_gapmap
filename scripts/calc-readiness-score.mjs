@@ -393,7 +393,7 @@ function calc(school) {
       `AI·SW 학습기회 보강 신호: ${aiLearningOpportunity}점`
     ],
     weakFactors,
-    recommendedSupports: weakFactors.length ? weakFactors.map((f) => `${f} 보강 검토`) : ["공개자료 기반 일반 모니터링", "AI 디지털교과서(AIDT)·학습관리시스템(LMS) 추가자료 연계 시 확장진단 검토"],
+    recommendedSupports: weakFactors.length ? weakFactors.map((f) => `${f} 보강 검토`) : ["AI·SW 프로그램 운영 현황 유지 점검", "필요 시 학교 추가자료로 지원소요 재확인"],
     dataReliability,
     raw: { educationDemand, teacherOperation, digitalAccess, aiLearningOpportunity, regionalAccess }
   };
