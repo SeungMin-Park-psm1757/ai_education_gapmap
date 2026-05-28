@@ -141,11 +141,11 @@ export default function DataPage() {
         </div>
 
         <div className="rounded-lg border border-slate-200 bg-white p-6 shadow-soft">
-          <h2 className="text-xl font-black text-slate-950">임시 학교데이터와 향후 조사</h2>
+          <h2 className="text-xl font-black text-slate-950">임의 학교데이터와 향후 조사</h2>
           <div className="mt-4 grid gap-3">
             {[
-              ["현재 v3", "공모전 목적 임시데이터 98건을 만들어 공공데이터와 결합했습니다."],
-              ["학교 조사 항목", "AI 디지털교과서(AIDT) 접속 안정성, 학습관리시스템(LMS) 사용 지속성, 교원 연수 이수, 기기 접근성, AI·SW 프로그램 운영, 외부 AI프로그램 접근성을 조사합니다."],
+              ["현 상태", "공모전 목적 임의 학교데이터 98건을 만들어 공공데이터와 결합했습니다."],
+              ["학교 조사 항목", "AI 디지털교과서(AIDT) 접속 안정성, 학습관리시스템(LMS) 사용 지속성, 교원 연수 이수, 기기 접근성, AI·SW 프로그램 운영, 외부 AI프로그램 접근성을 임의 데이터로 조치했습니다."],
               ["반영 방법", "학교별 엑셀·CSV를 학교 ID 기준으로 연결하고, 항목별 0-100점 정규화 후 기존 지원 소요 지수에 반영합니다."],
               ["운영 원칙", "학교 제공자료가 들어오면 점수는 갱신하되, 데이터 신뢰도는 총점과 분리해 표시합니다."]
             ].map(([label, text]) => (

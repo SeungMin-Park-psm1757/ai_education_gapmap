@@ -190,7 +190,7 @@ export function GapMap({
                 ["학교", scores.length],
                 ["가상 배치", scores.length],
                 ["평균", average(scores)],
-                ["임시", manifest.counts?.schoolAdditionalData ?? scores.length]
+                ["임의", manifest.counts?.schoolAdditionalData ?? scores.length]
               ].map(([label, value]) => (
                 <div key={label} className="rounded-md bg-slate-50 px-3 py-2">
                   <p className="text-xs font-bold text-slate-500">{label}</p>
@@ -348,7 +348,7 @@ export function GapMap({
             </div>
             <div className="border-b border-slate-100 pb-4">
               <div className="flex items-center justify-between gap-3 text-sm">
-                <span className="font-bold text-slate-600">임시데이터 구축</span>
+                <span className="font-bold text-slate-600">임의데이터 구축</span>
                 <span className="font-black text-slate-950">{temporaryRecordCount}건</span>
               </div>
               <ul className="mt-3 space-y-1 text-sm leading-6 text-slate-600">
