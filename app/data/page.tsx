@@ -114,7 +114,7 @@ export default function DataPage() {
           {[
             ["직접지표", "학생 수, 교원 수, 학급 수, 시설 수, 프로그램 수"],
             ["대리지표", "교원 운영 여건, AI·SW 학습기회, 지역 접근성"],
-            ["추가자료 필요", "AI 수업 활용률, AIDT 접속 로그, LMS 사용빈도, 교원 연수 이력"]
+            ["추가자료 필요", "AI 수업 활용률, AI 디지털교과서(AIDT) 접속 로그, 학습관리시스템(LMS) 사용빈도, 교원 연수 이력"]
           ].map(([label, text]) => (
             <div key={label} className="grid gap-2 border-b border-slate-100 px-4 py-3 text-sm last:border-b-0 md:grid-cols-[160px_1fr]">
               <p className="font-black text-slate-950">{label}</p>
@@ -145,7 +145,7 @@ export default function DataPage() {
           <div className="mt-4 grid gap-3">
             {[
               ["현재 한계", "공개자료만으로 교실 안 AI 활용의 질을 확정하지 않습니다."],
-              ["확장진단 대기", "AIDT·LMS는 현재 총점에 넣지 않고 별도 슬롯으로 둡니다."],
+              ["확장진단 대기", "AI 디지털교과서(AIDT)·학습관리시스템(LMS)는 현재 총점에 넣지 않고 별도 슬롯으로 둡니다."],
               ["추가 가능 항목", "접속 안정성, 장애시간, 사용 지속성, 적용 학년·학급 비율"]
             ].map(([label, text]) => (
               <div key={label} className="rounded-lg bg-slate-50 p-4">

@@ -151,7 +151,7 @@ export function calculateReadinessScore(school: SchoolProfile): ReadinessScore {
 
   const recommendedSupports = weakFactors.length
     ? weakFactors.map((factor) => `${factor} 보강 검토`)
-    : ["공개자료 기반 일반 모니터링", "AIDT·LMS 추가자료 연계 시 확장진단 검토"];
+    : ["공개자료 기반 일반 모니터링", "AI 디지털교과서(AIDT)·학습관리시스템(LMS) 추가자료 연계 시 확장진단 검토"];
   const dataReliability = getDataReliability(school)!;
 
   return {

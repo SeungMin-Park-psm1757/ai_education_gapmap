@@ -91,8 +91,8 @@ export function getAdminActions(score: ReadinessScore): AdminAction[] {
       {
         title: "연수 배정",
         why: "공개자료만으로 교실 활용 수준까지 보기는 어렵습니다.",
-        action: "AIDT·LMS 자료가 연결되면 교원 연수와 수업설계 지원 필요성을 재점검하세요.",
-        requiredData: "AIDT·LMS 사용빈도, 교원 연수 이력"
+        action: "AI 디지털교과서(AIDT)·학습관리시스템(LMS) 자료가 연결되면 교원 연수와 수업설계 지원 필요성을 재점검하세요.",
+        requiredData: "AI 디지털교과서(AIDT)·학습관리시스템(LMS) 사용빈도, 교원 연수 이력"
       }
     );
   }

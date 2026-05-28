@@ -156,8 +156,8 @@ const scores = publicScores.map((score) => {
     signals: [
       `지원 소요 지수: ${scoreValue}점`,
       "공공데이터 + 학교 추가자료 예시 반영",
-      `AIDT 접속 안정성: ${extra.aidtConnectionStability}점`,
-      `LMS 사용 지속성: ${extra.lmsUseContinuity}점`
+      `AI 디지털교과서(AIDT) 접속 안정성: ${extra.aidtConnectionStability}점`,
+      `학습관리시스템(LMS) 사용 지속성: ${extra.lmsUseContinuity}점`
     ],
     weakFactors: weakFactors(raw),
     recommendedSupports: recommendedSupports(raw, reliabilityGrade),
@@ -186,8 +186,8 @@ const manifest = {
       name: "학교 제공 추가자료 예시",
       count: schoolAdditionalData.length,
       fields: [
-        "AIDT 접속 안정성",
-        "LMS 사용 지속성",
+        "AI 디지털교과서(AIDT) 접속 안정성",
+        "학습관리시스템(LMS) 사용 지속성",
         "교원 연수 이수",
         "기기 접근성",
         "AI·SW 프로그램 운영",

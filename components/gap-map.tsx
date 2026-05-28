@@ -142,7 +142,7 @@ export function GapMap({
         {
           name: "학교 제공 추가자료 예시",
           count: manifest.counts?.schoolAdditionalData ?? scores.length,
-          fields: ["AIDT 접속 안정성", "LMS 사용 지속성", "교원 연수 이수", "기기 접근성", "AI·SW 프로그램 운영", "외부 AI프로그램 접근성"]
+          fields: ["AI 디지털교과서(AIDT) 접속 안정성", "학습관리시스템(LMS) 사용 지속성", "교원 연수 이수", "기기 접근성", "AI·SW 프로그램 운영", "외부 AI프로그램 접근성"]
         }
       ];
   const temporaryRecordCount = temporaryDataSources.reduce((total, source) => total + source.count, 0);
@@ -362,11 +362,11 @@ export function GapMap({
               ))}
             </div>
           </div>
-          {manifest.warnings?.filter((warning) => !warning.includes("AIDT·LMS 값")).length ? (
+          {manifest.warnings?.filter((warning) => !warning.includes("AI 디지털교과서(AIDT)·학습관리시스템(LMS) 값")).length ? (
             <div className="mt-5 rounded-md bg-orange-50 p-4">
               <p className="text-sm font-black text-orange-800">보강 필요 데이터</p>
               <ul className="mt-2 space-y-2 text-sm leading-6 text-orange-900">
-                {manifest.warnings.filter((warning) => !warning.includes("AIDT·LMS 값")).map((warning) => (
+                {manifest.warnings.filter((warning) => !warning.includes("AI 디지털교과서(AIDT)·학습관리시스템(LMS) 값")).map((warning) => (
                   <li key={warning}>{warning}</li>
                 ))}
               </ul>

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-28T05:32:23.997Z",
+  "generatedAt": "2026-05-28T05:36:02.853Z",
   "targetSido": "서울특별시",
   "targetDistrict": "노원구",
   "dataVersion": "v3",
@@ -25,8 +25,8 @@
       "name": "학교 제공 추가자료 예시",
       "count": 98,
       "fields": [
-        "AIDT 접속 안정성",
-        "LMS 사용 지속성",
+        "AI 디지털교과서(AIDT) 접속 안정성",
+        "학습관리시스템(LMS) 사용 지속성",
         "교원 연수 이수",
         "기기 접근성",
         "AI·SW 프로그램 운영",
