@@ -18,7 +18,7 @@ export default function HomePage() {
       <SectionHeader
         eyebrow="교육 공공데이터 AI 활용대회 MVP"
         title={COPY.productName}
-        description="공개자료 기반 지원 필요 신호를 지도와 행정 조치로 연결합니다."
+        description="공공데이터와 학교 데이터를 종합하여 AI 교육여건 활성화를 위한 지원소요를 확인합니다."
       />
 
       {!hasData ? <DataRequired /> : null}
@@ -27,18 +27,18 @@ export default function HomePage() {
         <>
           <section className="mb-6 rounded-lg border border-blue-100 bg-white p-5 shadow-soft">
             <div className="flex flex-wrap gap-2">
-              <span className="rounded-md bg-blue-50 px-3 py-1 text-xs font-black text-blue-700">학교 평가가 아니라 지원 소요 진단</span>
+              <span className="rounded-md bg-blue-50 px-3 py-1 text-xs font-black text-blue-700">학교 평가가 아니라 AI 교육 지원 소요 진단</span>
               <span className="rounded-md bg-slate-100 px-3 py-1 text-xs font-black text-slate-700">공개자료 기반</span>
               <span className="rounded-md bg-slate-100 px-3 py-1 text-xs font-black text-slate-700">
-                {isAnonymizeMode() ? "제출용 익명화" : "실명 내부 검토"}
+                {isAnonymizeMode() ? "노원구 학교를 모델로 구축(단, 학교명과 위치 익명화)" : "실명 내부 검토"}
               </span>
             </div>
             <div className="mt-5 grid gap-3 md:grid-cols-4">
               {[
-                ["무엇인가", "AI 교육 지원이 먼저 필요한 신호를 찾는 대시보드"],
                 ["공공데이터", "NEIS, 학교알리미, 교육통계, 교육청 공개자료"],
+                ["임시데이터 구축", "AIDT 접속 안정성, LMS 사용 지속성, 교원 연수 이수, 기기 접근성, AI·SW 프로그램 운영, 외부 프로그램 접근성, 제출자료 완전성"],
                 ["AI 활용", "취약 요인 라벨링, 유사 학교군 분류, 지원 유형 매칭"],
-                ["결정 지원", "예산·연수·프로그램·현장 확인 우선순위 검토"]
+                ["지원소요 산출", "예산·연수·프로그램·시설지원 확인 우선순위 검토"]
               ].map(([title, text]) => (
                 <div key={title} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
                   <p className="text-xs font-black text-blue-700">{title}</p>
@@ -56,14 +56,10 @@ export default function HomePage() {
           </div>
 
           <section className="mt-8 rounded-lg border border-slate-200 bg-white p-6 shadow-soft">
-            <p className="text-sm font-black text-blue-700">이 화면에서 볼 것</p>
-            <h2 className="mt-2 text-2xl font-black text-slate-950">점수가 높을수록 지원 필요 신호가 큽니다</h2>
-            <p className="mt-3 max-w-3xl text-sm leading-6 text-slate-600">
-              AIDT·LMS 접속로그와 장애시간은 총점에 넣지 않고, 추가자료가 제공될 때 `확장진단 대기` 슬롯에서 별도 확인합니다.
-            </p>
+            <h2 className="text-2xl font-black text-slate-950">점수가 높을수록 지원이 필요합니다.</h2>
             <div className="mt-5 flex flex-wrap gap-3">
               <Link href="/map" className="rounded-xl bg-slate-950 px-5 py-3 text-sm font-black text-white">
-                격차지도 보기
+                AI 교육격차 지도로 확인
               </Link>
               <Link href="/priorities" className="rounded-xl border border-slate-200 bg-white px-5 py-3 text-sm font-black text-slate-700">
                 다음 조치 보기
