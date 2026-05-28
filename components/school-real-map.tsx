@@ -163,6 +163,31 @@ function getPlottedPoints(points: RealMapPoint[]): PlottedPoint[] {
   });
 }
 
+function hashString(value: string) {
+  let hash = 2166136261;
+  for (let index = 0; index < value.length; index += 1) {
+    hash ^= value.charCodeAt(index);
+    hash = Math.imul(hash, 16777619);
+  }
+  return hash >>> 0;
+}
+
+function pseudoRandom(seed: number) {
+  let value = seed || 1;
+  value ^= value << 13;
+  value ^= value >>> 17;
+  value ^= value << 5;
+  return ((value >>> 0) % 10000) / 10000;
+}
+
+function anonymousPlotPosition(point: RealMapPoint, index: number) {
+  const seed = hashString(`${point.schoolId}-${point.schoolName}-${index}`);
+  return {
+    left: 8 + pseudoRandom(seed) * 84,
+    top: 10 + pseudoRandom(seed ^ 0x9e3779b9) * 78
+  };
+}
+
 export function SchoolRealMap({ points }: { points: RealMapPoint[] }) {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const mapRef = useRef<LeafletMap | null>(null);
@@ -170,10 +195,9 @@ export function SchoolRealMap({ points }: { points: RealMapPoint[] }) {
   const plottedPoints = useMemo(() => getPlottedPoints(points), [points]);
   const schematicPoints = useMemo(
     () =>
-      points.slice(0, 60).map((point, index) => ({
+      points.slice(0, 80).map((point, index) => ({
         ...point,
-        left: 8 + ((index * 17) % 84),
-        top: 10 + ((index * 29) % 78)
+        ...anonymousPlotPosition(point, index)
       })),
     [points]
   );
@@ -241,30 +265,30 @@ export function SchoolRealMap({ points }: { points: RealMapPoint[] }) {
 
   if (!plottedPoints.length && points.length) {
     return (
-      <div className="relative h-[560px] min-h-[560px] w-full overflow-hidden bg-slate-50">
-        <div className="absolute inset-5 rounded-xl border border-slate-200 bg-white">
-          <div className="absolute left-4 top-4 rounded-md bg-slate-100 px-3 py-1 text-xs font-black text-slate-700">
-            익명화 권역 분포
-          </div>
-          <div className="absolute inset-0 opacity-80">
-            <div className="absolute left-1/3 top-0 h-full border-l border-dashed border-slate-200" />
-            <div className="absolute left-2/3 top-0 h-full border-l border-dashed border-slate-200" />
-            <div className="absolute left-0 top-1/3 w-full border-t border-dashed border-slate-200" />
-            <div className="absolute left-0 top-2/3 w-full border-t border-dashed border-slate-200" />
+      <div className="relative h-[560px] min-h-[560px] w-full overflow-hidden bg-slate-100">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/anonymous-region-map.svg')" }}
+          aria-hidden="true"
+        />
+        <div className="absolute inset-0 bg-white/10" aria-hidden="true" />
+        <div className="absolute inset-5 rounded-xl border border-white/80">
+          <div className="absolute left-4 top-4 rounded-md bg-white/95 px-3 py-1 text-xs font-black text-slate-700 shadow-sm">
+            익명화 권역 지도
           </div>
           {schematicPoints.map((point) => (
             <a
               key={point.schoolId}
               href={`/schools/${encodeURIComponent(point.schoolId)}`}
-              className="absolute flex h-8 w-8 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-2 border-white text-[10px] font-black text-white shadow-md"
+              className="absolute flex h-8 w-8 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-[3px] border-white text-[10px] font-black text-white shadow-lg transition-transform hover:z-10 hover:scale-110"
               style={{ left: `${point.left}%`, top: `${point.top}%`, background: point.color }}
               title={`${point.schoolName} ${point.score}점`}
             >
               {point.score}
             </a>
           ))}
-          <div className="absolute bottom-4 left-4 right-4 rounded-lg bg-white/95 p-3 text-xs font-bold leading-5 text-slate-600 shadow-sm">
-            제출용 익명화 모드에서는 실제 좌표를 표시하지 않고 권역화된 분포로 대체합니다.
+          <div className="absolute bottom-4 left-4 right-4 rounded-lg bg-white/95 p-3 text-xs font-bold leading-5 text-slate-600 shadow-sm md:right-auto md:max-w-md">
+            제출용 익명화 모드에서는 지도 이미지만 배경으로 사용하고, 마커 위치는 실제 좌표가 아닌 임의 분포로 표시합니다.
           </div>
         </div>
       </div>
