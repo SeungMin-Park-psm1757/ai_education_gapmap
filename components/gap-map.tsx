@@ -29,7 +29,7 @@ function getBucket(score: ReadinessScore) {
   }
   if (score.score >= 45) {
     return {
-      label: "우선 지원",
+      label: "우선지원 필요",
       color: "#dc2626",
       bg: "bg-red-50",
       text: "text-red-700",
@@ -38,7 +38,7 @@ function getBucket(score: ReadinessScore) {
   }
   if (score.score >= 30) {
     return {
-      label: "보완 검토",
+      label: "지원 필요사항 검토",
       color: "#ea580c",
       bg: "bg-orange-50",
       text: "text-orange-700",
@@ -121,8 +121,8 @@ export function GapMap({
   const maxScore = sorted[0]?.score ?? 0;
   const minScore = sorted[sorted.length - 1]?.score ?? 0;
   const scoreBuckets = [
-    { label: "우선 지원", count: scores.filter((score) => score.level === "attention").length, dot: "bg-red-600" },
-    { label: "보완 검토", count: scores.filter((score) => score.level === "medium").length, dot: "bg-orange-500" },
+    { label: "우선지원 필요", count: scores.filter((score) => score.level === "attention").length, dot: "bg-red-600" },
+    { label: "지원 필요사항 검토", count: scores.filter((score) => score.level === "medium").length, dot: "bg-orange-500" },
     { label: "일반 모니터링", count: scores.filter((score) => score.level === "high").length, dot: "bg-blue-600" },
     { label: "현장 확인 우선", count: fieldCheckCount, dot: "bg-slate-400" }
   ];
@@ -139,7 +139,7 @@ export function GapMap({
             className="rounded-lg border border-slate-200 bg-white p-5 shadow-soft hover:border-slate-400"
           >
             <div className="flex items-center justify-between gap-3">
-              <span className="rounded-md bg-red-50 px-2.5 py-1 text-xs font-black text-red-700">우선 지원 TOP {index + 1}</span>
+              <span className="rounded-md bg-red-50 px-2.5 py-1 text-xs font-black text-red-700">우선지원 필요 TOP {index + 1}</span>
               <span className="text-2xl font-black text-slate-950">{item.score}</span>
             </div>
             <h2 className="mt-3 truncate text-lg font-black text-slate-950">{item.schoolName}</h2>
@@ -263,7 +263,7 @@ export function GapMap({
           <div className="border-b border-slate-200 px-5 py-4">
             <div className="flex items-center gap-2">
               <School2 className="h-5 w-5 text-blue-700" aria-hidden="true" />
-              <h2 className="text-xl font-black text-slate-950">우선 지원 상세</h2>
+              <h2 className="text-xl font-black text-slate-950">우선지원 필요 상세</h2>
             </div>
             <p className="mt-2 text-sm leading-6 text-slate-600">
               지원 소요 지수가 높은 학교부터 대표 보강 영역과 다음 조치를 확인합니다.
@@ -310,7 +310,7 @@ export function GapMap({
               ["정규화 학교", schools.length],
               ["좌표 매칭", coordinateCount],
               ["지원 소요 산출", scores.length],
-              ["우선 지원", attentionCount],
+              ["우선지원 필요", attentionCount],
               ["현장 확인", fieldCheckCount],
               ["점수 범위", `${minScore}-${maxScore}`]
             ].map(([label, value]) => (

@@ -99,8 +99,7 @@ const schoolAdditionalData = schools.map((school, index) => {
     teacherTrainingCompletion: qualityFromNeed(raw.teacherOperation, seed ^ 0x13579bdf),
     deviceAccessReadiness: qualityFromNeed(raw.digitalAccess, seed ^ 0x2468ace0),
     aiSwProgramCoverage: qualityFromNeed(raw.aiLearningOpportunity, seed ^ 0x10203040),
-    externalProgramAccess: qualityFromNeed(raw.regionalAccess, seed ^ 0x55667788),
-    submittedDataCompleteness: clamp(72 + pseudoRandom(seed ^ 0x77777777) * 28 - (publicScore?.dataReliability?.grade === "B" ? 18 : 0), 42, 100)
+    externalAiProgramAccess: qualityFromNeed(raw.regionalAccess, seed ^ 0x55667788)
   };
 });
 
@@ -123,7 +122,7 @@ const scores = publicScores.map((score) => {
         (100 - extra.aiSwProgramCoverage) * 0.35 +
         (100 - extra.lmsUseContinuity) * 0.3
     ),
-    regionalAccess: clamp(score.raw.regionalAccess * 0.65 + (100 - extra.externalProgramAccess) * 0.35)
+    regionalAccess: clamp(score.raw.regionalAccess * 0.65 + (100 - extra.externalAiProgramAccess) * 0.35)
   };
 
   const calculated =
@@ -133,10 +132,8 @@ const scores = publicScores.map((score) => {
     (raw.aiLearningOpportunity / 100) * weights.aiLearningOpportunity +
     (raw.regionalAccess / 100) * weights.regionalAccess;
 
-  const missingCoreCount = extra.submittedDataCompleteness < 50 ? 2 : extra.submittedDataCompleteness < 65 ? 1 : 0;
-  const reliabilityGrade = missingCoreCount >= 2 ? "C" : extra.submittedDataCompleteness >= 82 ? "A" : "B";
-  const reliabilityLabel =
-    reliabilityGrade === "A" ? "학교 추가자료 충분" : reliabilityGrade === "B" ? "학교 추가자료 일부 보완" : "현장 확인 필요";
+  const reliabilityGrade = score.dataReliability?.grade ?? "B";
+  const reliabilityLabel = score.dataReliability?.label ?? (reliabilityGrade === "A" ? "공개자료 충분" : "일부 대리지표");
   const schoolDataAdjustment = 6;
   const scoreValue = clamp(calculated + schoolDataAdjustment);
 
@@ -156,9 +153,9 @@ const scores = publicScores.map((score) => {
     dataReliability: {
       grade: reliabilityGrade,
       label: reliabilityLabel,
-      missingCoreCount,
-      directFieldCount: 8,
-      proxyFieldCount: 5
+      missingCoreCount: score.dataReliability?.missingCoreCount ?? 0,
+      directFieldCount: score.dataReliability?.directFieldCount ?? 3,
+      proxyFieldCount: score.dataReliability?.proxyFieldCount ?? 5
     },
     raw
   };

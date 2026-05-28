@@ -15,7 +15,7 @@ export default function PrioritiesPage() {
       <SectionHeader
         eyebrow="지원 우선순위"
         title="먼저 볼 학교와 다음 조치"
-        description="점수가 높을수록 좋은 것이 아니라 지원 필요 신호가 큽니다. 신뢰도 C는 현장 확인 우선으로 분리합니다."
+        description="점수가 높을수록 AI교육을 위한 지원이 필요합니다. 신뢰도 C는 현장 확인 우선으로 분리합니다."
       />
       {!hasData ? <DataRequired /> : null}
       {hasData ? (
