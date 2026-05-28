@@ -15,7 +15,7 @@ export function AdminActionCards({ score }: { score: ReadinessScore }) {
           산출 결과를 예산·연수·프로그램·자료 보완으로 연결합니다.
         </p>
       </div>
-      <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+      <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
         {actions.map((action) => (
           <div key={action.title} className="rounded-2xl border border-slate-200 bg-white p-5 shadow-soft">
             <span className="inline-flex rounded-md bg-slate-100 px-2.5 py-1 text-xs font-black text-slate-700">
