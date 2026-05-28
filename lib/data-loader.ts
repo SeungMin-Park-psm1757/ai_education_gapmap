@@ -3,7 +3,7 @@ import path from "node:path";
 import { anonymizeManifest, anonymizeScores, anonymizeSchools, isAnonymizeMode } from "./anonymize";
 import type { DataManifest, ReadinessScore, SchoolProfile } from "./types";
 
-const dataVersion = process.env.NEXT_PUBLIC_DATA_VERSION === "v3" ? "v3" : "v2";
+const dataVersion = process.env.NEXT_PUBLIC_DATA_VERSION === "v2" ? "v2" : "v3";
 const liveDirName = dataVersion === "v3" ? "live-v3" : "live";
 const liveDir = path.join(process.cwd(), "data", liveDirName);
 const fallbackLiveDir = path.join(process.cwd(), "data", "live");

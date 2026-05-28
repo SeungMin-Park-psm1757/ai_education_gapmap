@@ -1,7 +1,7 @@
 import type { DataManifest, ReadinessScore, SchoolProfile } from "./types";
 
 export function isAnonymizeMode() {
-  return process.env.NEXT_PUBLIC_DEMO_ANONYMIZE === "true";
+  return process.env.NEXT_PUBLIC_DEMO_ANONYMIZE !== "false";
 }
 
 export function getRegionLabel() {
