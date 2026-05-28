@@ -45,6 +45,7 @@ export type RealMapPoint = {
 type PlottedPoint = RealMapPoint & {
   plotLatitude: number;
   plotLongitude: number;
+  isSynthetic?: boolean;
 };
 
 const leafletCssId = "leaflet-css";
@@ -180,11 +181,17 @@ function pseudoRandom(seed: number) {
   return ((value >>> 0) % 10000) / 10000;
 }
 
-function anonymousPlotPosition(point: RealMapPoint, index: number) {
+function anonymousPlotPosition(point: RealMapPoint, index: number): PlottedPoint {
   const seed = hashString(`${point.schoolId}-${point.schoolName}-${index}`);
+  const west = 127.035;
+  const east = 127.115;
+  const south = 37.61;
+  const north = 37.69;
   return {
-    left: 8 + pseudoRandom(seed) * 84,
-    top: 10 + pseudoRandom(seed ^ 0x9e3779b9) * 78
+    ...point,
+    plotLatitude: south + pseudoRandom(seed ^ 0x9e3779b9) * (north - south),
+    plotLongitude: west + pseudoRandom(seed) * (east - west),
+    isSynthetic: true
   };
 }
 
@@ -193,17 +200,14 @@ export function SchoolRealMap({ points }: { points: RealMapPoint[] }) {
   const mapRef = useRef<LeafletMap | null>(null);
   const [error, setError] = useState<string | null>(null);
   const plottedPoints = useMemo(() => getPlottedPoints(points), [points]);
-  const schematicPoints = useMemo(
-    () =>
-      points.slice(0, 80).map((point, index) => ({
-        ...point,
-        ...anonymousPlotPosition(point, index)
-      })),
-    [points]
+  const displayPoints = useMemo(
+    () => (plottedPoints.length ? plottedPoints : points.map((point, index) => anonymousPlotPosition(point, index))),
+    [plottedPoints, points]
   );
+  const isAnonymousMap = !plottedPoints.length && points.length > 0;
 
   useEffect(() => {
-    if (!plottedPoints.length) return;
+    if (!displayPoints.length) return;
     let mounted = true;
 
     loadLeaflet()
@@ -226,9 +230,9 @@ export function SchoolRealMap({ points }: { points: RealMapPoint[] }) {
           })
           .addTo(map);
 
-        if (plottedPoints.length) {
-          const latLngs = plottedPoints.map((point) => [point.plotLatitude, point.plotLongitude] as [number, number]);
-          plottedPoints.forEach((point) => {
+        if (displayPoints.length) {
+          const latLngs = displayPoints.map((point) => [point.plotLatitude, point.plotLongitude] as [number, number]);
+          displayPoints.forEach((point) => {
             leaflet
               .marker([point.plotLatitude, point.plotLongitude], {
                 title: point.schoolName,
@@ -243,7 +247,7 @@ export function SchoolRealMap({ points }: { points: RealMapPoint[] }) {
               .addTo(map)
               .bindPopup(popupHtml(point));
           });
-          map.fitBounds(leaflet.latLngBounds(latLngs), { padding: [28, 28], maxZoom: 15 });
+          map.fitBounds(leaflet.latLngBounds(latLngs), { padding: [28, 28], maxZoom: isAnonymousMap ? 13 : 15 });
         } else {
           map.setView([37.654, 127.075], 13);
         }
@@ -261,49 +265,22 @@ export function SchoolRealMap({ points }: { points: RealMapPoint[] }) {
         mapRef.current = null;
       }
     };
-  }, [plottedPoints]);
-
-  if (!plottedPoints.length && points.length) {
-    return (
-      <div className="relative h-[560px] min-h-[560px] w-full overflow-hidden bg-slate-100">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/anonymous-region-map.svg')" }}
-          aria-hidden="true"
-        />
-        <div className="absolute inset-0 bg-white/10" aria-hidden="true" />
-        <div className="absolute inset-5 rounded-xl border border-white/80">
-          <div className="absolute left-4 top-4 rounded-md bg-white/95 px-3 py-1 text-xs font-black text-slate-700 shadow-sm">
-            익명화 권역 지도
-          </div>
-          {schematicPoints.map((point) => (
-            <a
-              key={point.schoolId}
-              href={`/schools/${encodeURIComponent(point.schoolId)}`}
-              className="absolute flex h-8 w-8 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-[3px] border-white text-[10px] font-black text-white shadow-lg transition-transform hover:z-10 hover:scale-110"
-              style={{ left: `${point.left}%`, top: `${point.top}%`, background: point.color }}
-              title={`${point.schoolName} ${point.score}점`}
-            >
-              {point.score}
-            </a>
-          ))}
-          <div className="absolute bottom-4 left-4 right-4 rounded-lg bg-white/95 p-3 text-xs font-bold leading-5 text-slate-600 shadow-sm md:right-auto md:max-w-md">
-            제출용 익명화 모드에서는 지도 이미지만 배경으로 사용하고, 마커 위치는 실제 좌표가 아닌 임의 분포로 표시합니다.
-          </div>
-        </div>
-      </div>
-    );
-  }
+  }, [displayPoints, isAnonymousMap]);
 
   return (
     <div className="relative h-[560px] min-h-[560px] w-full overflow-hidden bg-slate-100">
       <div ref={containerRef} className="h-full w-full" aria-label="학교별 AI 교육 지원 소요 실제 지도" />
+      {isAnonymousMap ? (
+        <div className="pointer-events-none absolute bottom-4 left-4 right-4 rounded-lg bg-white/95 p-3 text-xs font-bold leading-5 text-slate-600 shadow-sm md:right-auto md:max-w-md">
+          실제 노원구 지도 배경을 사용하되, 마커 위치는 학교 실좌표가 아닌 임의 분포입니다.
+        </div>
+      ) : null}
       {error ? (
         <div className="absolute inset-0 flex items-center justify-center bg-white/90 p-6 text-center">
           <p className="max-w-sm text-sm font-bold leading-6 text-slate-700">{error}</p>
         </div>
       ) : null}
-      {!error && !plottedPoints.length ? (
+      {!error && !displayPoints.length ? (
         <div className="absolute inset-0 flex items-center justify-center bg-white/90 p-6 text-center">
           <p className="max-w-sm text-sm font-bold leading-6 text-slate-700">표시할 좌표 데이터가 없습니다.</p>
         </div>

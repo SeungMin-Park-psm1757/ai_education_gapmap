@@ -1,0 +1,15 @@
+{
+  "generatedAt": "2026-05-28T02:47:27.288Z",
+  "targetSido": "서울특별시",
+  "targetDistrict": "노원구",
+  "dataVersion": "v3",
+  "warnings": [
+    "v3는 공공데이터에 학교 제공 추가자료 예시값을 결합한 시연용 산출입니다.",
+    "AIDT·LMS 값은 실제 기관 연계 전 임시값이며, 운영 구조 검증 목적으로만 사용합니다."
+  ],
+  "counts": {
+    "schools": 98,
+    "scores": 98,
+    "schoolAdditionalData": 98
+  }
+}

@@ -3,12 +3,17 @@ import path from "node:path";
 import { anonymizeManifest, anonymizeScores, anonymizeSchools, isAnonymizeMode } from "./anonymize";
 import type { DataManifest, ReadinessScore, SchoolProfile } from "./types";
 
-const liveDir = path.join(process.cwd(), "data", "live");
+const dataVersion = process.env.NEXT_PUBLIC_DATA_VERSION === "v3" ? "v3" : "v2";
+const liveDirName = dataVersion === "v3" ? "live-v3" : "live";
+const liveDir = path.join(process.cwd(), "data", liveDirName);
+const fallbackLiveDir = path.join(process.cwd(), "data", "live");
 
 function readJson<T>(fileName: string, fallback: T): T {
   const filePath = path.join(liveDir, fileName);
-  if (!fs.existsSync(filePath)) return fallback;
-  return JSON.parse(fs.readFileSync(filePath, "utf8")) as T;
+  if (fs.existsSync(filePath)) return JSON.parse(fs.readFileSync(filePath, "utf8")) as T;
+  const fallbackPath = path.join(fallbackLiveDir, fileName);
+  if (fs.existsSync(fallbackPath)) return JSON.parse(fs.readFileSync(fallbackPath, "utf8")) as T;
+  return fallback;
 }
 
 export function getSchools(): SchoolProfile[] {

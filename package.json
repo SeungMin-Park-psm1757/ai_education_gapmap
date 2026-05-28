@@ -10,6 +10,7 @@
     "fetch:public": "node scripts/fetch-public-data.mjs",
     "import:public-files": "node scripts/import-public-files.mjs",
     "score:readiness": "node scripts/calc-readiness-score.mjs",
+    "score:v3": "node scripts/generate-v3-school-data.mjs",
     "prepare:data": "npm run fetch:public && npm run import:public-files && npm run score:readiness",
     "check:data": "node scripts/check-data-readiness.mjs",
     "check:copy": "node scripts/check-copy.mjs"
