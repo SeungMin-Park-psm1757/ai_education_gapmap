@@ -81,6 +81,17 @@ function recommendedSupports(raw, reliabilityGrade) {
 
 const publicScoreById = new Map(publicScores.map((score) => [score.schoolId, score]));
 
+function countRows(fileName) {
+  const rows = readJson(path.join(liveDir, fileName), []);
+  return Array.isArray(rows) ? rows.length : 0;
+}
+
+const publicDataSources = [
+  { name: "NEIS 학교 기본정보", count: countRows("neis-schools.raw.json") },
+  { name: "학교알리미 공시자료", count: countRows("schoolinfo-public.raw.json") },
+  { name: "공공데이터포털 전국초중등학교위치표준데이터", count: countRows("school-location-standard.raw.json") }
+].filter((source) => source.count > 0);
+
 const schoolAdditionalData = schools.map((school, index) => {
   const publicScore = publicScoreById.get(school.id);
   const raw = publicScore?.raw ?? {
@@ -167,13 +178,28 @@ const manifest = {
   targetDistrict: "노원구",
   dataVersion: "v3",
   warnings: [
-    "v3는 공공데이터에 학교 제공 추가자료 예시값을 결합한 시연용 산출입니다.",
-    "AIDT·LMS 값은 실제 기관 연계 전 임시값이며, 운영 구조 검증 목적으로만 사용합니다."
+    "v3는 공공데이터에 학교 제공 추가자료 예시값을 결합한 공모전 목적 산출입니다."
+  ],
+  publicDataSources,
+  temporaryDataSources: [
+    {
+      name: "학교 제공 추가자료 예시",
+      count: schoolAdditionalData.length,
+      fields: [
+        "AIDT 접속 안정성",
+        "LMS 사용 지속성",
+        "교원 연수 이수",
+        "기기 접근성",
+        "AI·SW 프로그램 운영",
+        "외부 AI프로그램 접근성"
+      ]
+    }
   ],
   counts: {
     schools: schools.length,
     scores: scores.length,
-    schoolAdditionalData: schoolAdditionalData.length
+    schoolAdditionalData: schoolAdditionalData.length,
+    actualPublicRecords: publicDataSources.reduce((total, source) => total + source.count, 0)
   }
 };
 

@@ -128,6 +128,24 @@ export function GapMap({
   ];
   const regionLabel = getRegionLabel();
   const anonymized = isAnonymizeMode();
+  const publicDataSources = manifest.publicDataSources?.length
+    ? manifest.publicDataSources
+    : [
+        { name: "NEIS 학교 기본정보", count: schools.length },
+        { name: "학교알리미 공시자료", count: scores.length },
+        { name: "공공데이터포털 전국초중등학교위치표준데이터", count: coordinateCount }
+      ];
+  const publicRecordCount = manifest.counts?.actualPublicRecords ?? publicDataSources.reduce((total, source) => total + source.count, 0);
+  const temporaryDataSources = manifest.temporaryDataSources?.length
+    ? manifest.temporaryDataSources
+    : [
+        {
+          name: "학교 제공 추가자료 예시",
+          count: manifest.counts?.schoolAdditionalData ?? scores.length,
+          fields: ["AIDT 접속 안정성", "LMS 사용 지속성", "교원 연수 이수", "기기 접근성", "AI·SW 프로그램 운영", "외부 AI프로그램 접근성"]
+        }
+      ];
+  const temporaryRecordCount = temporaryDataSources.reduce((total, source) => total + source.count, 0);
 
   return (
     <div className="space-y-8">
@@ -166,7 +184,7 @@ export function GapMap({
                 ["학교", scores.length],
                 ["좌표", coordinateCount],
                 ["평균", average(scores)],
-                ["경고", manifest.warnings?.length ?? 0]
+                ["임시", manifest.counts?.schoolAdditionalData ?? scores.length]
               ].map(([label, value]) => (
                 <div key={label} className="rounded-md bg-slate-50 px-3 py-2">
                   <p className="text-xs font-bold text-slate-500">{label}</p>
@@ -266,7 +284,7 @@ export function GapMap({
               <h2 className="text-xl font-black text-slate-950">우선지원 필요 상세</h2>
             </div>
             <p className="mt-2 text-sm leading-6 text-slate-600">
-              지원 소요 지수가 높은 학교부터 대표 보강 영역과 다음 조치를 확인합니다.
+              지원 소요 지수가 높은 학교부터 지원소요와 조치를 제안합니다.
             </p>
           </div>
           <div className="divide-y divide-slate-100">
@@ -305,26 +323,50 @@ export function GapMap({
 
         <div className="rounded-lg border border-slate-200 bg-white p-5 shadow-soft">
           <h2 className="text-xl font-black text-slate-950">데이터 근거</h2>
-          <div className="mt-4 space-y-3">
-            {[
-              ["정규화 학교", schools.length],
-              ["좌표 매칭", coordinateCount],
-              ["지원 소요 산출", scores.length],
-              ["우선지원 필요", attentionCount],
-              ["현장 확인", fieldCheckCount],
-              ["점수 범위", `${minScore}-${maxScore}`]
-            ].map(([label, value]) => (
-              <div key={label} className="flex items-center justify-between border-b border-slate-100 pb-3 text-sm">
-                <span className="font-bold text-slate-600">{label}</span>
-                <span className="font-black text-slate-950">{value}</span>
+          <div className="mt-4 space-y-5">
+            <div className="border-b border-slate-100 pb-4">
+              <div className="flex items-center justify-between gap-3 text-sm">
+                <span className="font-bold text-slate-600">실제 데이터 활용</span>
+                <span className="font-black text-slate-950">{publicRecordCount}건</span>
               </div>
-            ))}
+              <ul className="mt-3 space-y-1 text-sm leading-6 text-slate-600">
+                {publicDataSources.map((source) => (
+                  <li key={source.name}>* {source.name} {source.count}건</li>
+                ))}
+              </ul>
+            </div>
+            <div className="border-b border-slate-100 pb-4">
+              <div className="flex items-center justify-between gap-3 text-sm">
+                <span className="font-bold text-slate-600">임시데이터 구축</span>
+                <span className="font-black text-slate-950">{temporaryRecordCount}건</span>
+              </div>
+              <ul className="mt-3 space-y-1 text-sm leading-6 text-slate-600">
+                {temporaryDataSources.map((source) => (
+                  <li key={source.name}>
+                    * {source.name}: {source.fields?.join(", ")}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="space-y-3">
+              {[
+                ["지원 소요 산출", scores.length],
+                ["우선지원 필요", attentionCount],
+                ["현장 확인", fieldCheckCount],
+                ["점수 범위", `${minScore}-${maxScore}`]
+              ].map(([label, value]) => (
+                <div key={label} className="flex items-center justify-between text-sm">
+                  <span className="font-bold text-slate-600">{label}</span>
+                  <span className="font-black text-slate-950">{value}</span>
+                </div>
+              ))}
+            </div>
           </div>
-          {manifest.warnings?.length ? (
+          {manifest.warnings?.filter((warning) => !warning.includes("AIDT·LMS 값")).length ? (
             <div className="mt-5 rounded-md bg-orange-50 p-4">
               <p className="text-sm font-black text-orange-800">보강 필요 데이터</p>
               <ul className="mt-2 space-y-2 text-sm leading-6 text-orange-900">
-                {manifest.warnings.map((warning) => (
+                {manifest.warnings.filter((warning) => !warning.includes("AIDT·LMS 값")).map((warning) => (
                   <li key={warning}>{warning}</li>
                 ))}
               </ul>

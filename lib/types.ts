@@ -80,5 +80,14 @@ export type DataManifest = {
   targetSido?: string;
   targetDistrict?: string;
   warnings?: string[];
+  publicDataSources?: {
+    name: string;
+    count: number;
+  }[];
+  temporaryDataSources?: {
+    name: string;
+    count: number;
+    fields?: string[];
+  }[];
   counts?: Record<string, number>;
 };

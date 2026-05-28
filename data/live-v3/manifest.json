@@ -1,15 +1,43 @@
 {
-  "generatedAt": "2026-05-28T05:26:51.368Z",
+  "generatedAt": "2026-05-28T05:32:23.997Z",
   "targetSido": "서울특별시",
   "targetDistrict": "노원구",
   "dataVersion": "v3",
   "warnings": [
-    "v3는 공공데이터에 학교 제공 추가자료 예시값을 결합한 시연용 산출입니다.",
-    "AIDT·LMS 값은 실제 기관 연계 전 임시값이며, 운영 구조 검증 목적으로만 사용합니다."
+    "v3는 공공데이터에 학교 제공 추가자료 예시값을 결합한 공모전 목적 산출입니다."
+  ],
+  "publicDataSources": [
+    {
+      "name": "NEIS 학교 기본정보",
+      "count": 100
+    },
+    {
+      "name": "학교알리미 공시자료",
+      "count": 96
+    },
+    {
+      "name": "공공데이터포털 전국초중등학교위치표준데이터",
+      "count": 93
+    }
+  ],
+  "temporaryDataSources": [
+    {
+      "name": "학교 제공 추가자료 예시",
+      "count": 98,
+      "fields": [
+        "AIDT 접속 안정성",
+        "LMS 사용 지속성",
+        "교원 연수 이수",
+        "기기 접근성",
+        "AI·SW 프로그램 운영",
+        "외부 AI프로그램 접근성"
+      ]
+    }
   ],
   "counts": {
     "schools": 98,
     "scores": 98,
-    "schoolAdditionalData": 98
+    "schoolAdditionalData": 98,
+    "actualPublicRecords": 289
   }
 }
