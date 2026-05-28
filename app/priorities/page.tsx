@@ -14,7 +14,7 @@ export default function PrioritiesPage() {
     <div>
       <SectionHeader
         title="지원 우선순위"
-        description="점수가 높을수록 AI교육을 위한 우선 지원이 필요합니다."
+        description="점수가 높을수록 AI 교육 지원소요가 큽니다."
       />
       {!hasData ? <DataRequired /> : null}
       {hasData ? (
@@ -59,7 +59,7 @@ export default function PrioritiesPage() {
 
           {fieldCheckItems.length ? (
             <section className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
-              <h2 className="text-xl font-black text-slate-950">현장 확인 우선</h2>
+              <h2 className="text-xl font-black text-slate-950">현장 우선확인 필요</h2>
               <p className="mt-2 text-sm leading-6 text-slate-600">
                 공개자료가 부족해 점수보다 현장 확인이 먼저 필요한 학교입니다. 신뢰도는 학교 역량이 아니라 데이터 해석의 확실성입니다.
               </p>

@@ -68,7 +68,7 @@ export default function SchoolDetailPage({ params }: { params: { id: string } })
       </div>
       {score.level === "field_check" ? (
         <section className="mt-8 rounded-2xl border border-slate-200 bg-slate-50 p-6">
-          <p className="text-sm font-black text-slate-700">현장 확인 우선</p>
+          <p className="text-sm font-black text-slate-700">현장 우선확인 필요</p>
           <h2 className="mt-2 text-2xl font-black text-slate-950">데이터 보완이 먼저 필요합니다</h2>
           <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">
             이 학교는 지원 소요 지수보다 데이터 보완이 먼저 필요합니다. 교육지원청 확인 또는 학교 추가자료 요청을 권장합니다.

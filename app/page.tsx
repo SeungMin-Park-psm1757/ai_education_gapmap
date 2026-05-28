@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import { DataRequired } from "@/components/data-required";
 import { MetricCard } from "@/components/metric-card";
 import { SectionHeader } from "@/components/section-header";
@@ -51,9 +51,9 @@ export default function HomePage() {
           <div className="grid gap-4 md:grid-cols-4">
             {[
               { label: "분석 학교", value: schools.length, helper: `${regionLabel} 공개자료 기준` },
-              { label: "우선 지원 검토", value: scores.filter((s) => s.level === "attention").length },
-              { label: "보완 검토", value: scores.filter((s) => s.level === "medium").length },
-              { label: "현장 확인 우선", value: scores.filter((s) => s.level === "field_check").length }
+              { label: "우선지원 필요", value: scores.filter((s) => s.level === "attention").length },
+              { label: "지원여부 검토", value: scores.filter((s) => s.level === "medium").length },
+              { label: "현장 우선확인 필요", value: scores.filter((s) => s.level === "field_check").length }
             ].map((metric) => (
               <MetricCard key={metric.label} label={metric.label} value={metric.value} helper={metric.helper} />
             ))}
@@ -61,9 +61,6 @@ export default function HomePage() {
 
           <section className="mt-8 rounded-lg border border-slate-200 bg-white p-6 shadow-soft">
             <h2 className="text-2xl font-black text-slate-950">점수가 높을수록 공개자료상 지원 필요 신호가 큽니다.</h2>
-            <p className="mt-2 max-w-3xl text-sm font-bold leading-6 text-slate-600">
-              확장진단 시나리오 데이터는 메인 지원 소요 지수에 반영하지 않고, 추가자료 제공 시 가능한 분석 구조로만 설명합니다.
-            </p>
             <div className="mt-5 flex flex-wrap gap-3">
               <Link href="/map" className="rounded-xl bg-slate-950 px-5 py-3 text-sm font-black text-white">
                 AI 교육격차 지도로 확인
@@ -78,3 +75,4 @@ export default function HomePage() {
     </div>
   );
 }
+

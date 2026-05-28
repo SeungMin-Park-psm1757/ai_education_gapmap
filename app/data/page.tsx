@@ -9,7 +9,17 @@ const sourceRows = [
   ["학교알리미 공시자료", "학교알리미", "예", "학생 수, 교원 수, 학급 수, 시설·프로그램 공시", "직접지표와 일부 대체지표 산출", "UI 익명화", "예"],
   ["공공데이터포털 학교 표준자료", "공공데이터포털", "예", "학교명, 주소 대조, 기관 구분", "공시자료 대조 및 기관 구분", "UI 익명화", "예"],
   ["교육통계·교육청 공개자료", "교육통계·교육청 공개자료", "예", "시설, 정보화, 프로그램 관련 공개자료", "보강 영역 산출 또는 보조", "집계 단위 사용", "예 또는 보조"],
-  ["확장진단 시나리오 데이터", "공모전 목적 예시", "아니오", "AI 디지털교과서(AIDT), 학습관리시스템(LMS), 연수, 기기, 프로그램 접근성", "추가자료 제공 시 가능한 분석 구조 설명", "실명 미사용", "아니오"]
+  ["확장진단 시나리오 데이터", "공모전 목적 상 방법론만 제시", "아니오", "AI 디지털교과서(AIDT), 학습관리시스템(LMS), 연수, AI 관련 기기 및 프로그램 접근성", "추가자료 제공 시 가능한 분석 구조 설명", "실명 미사용", "아니오"]
+];
+
+const sourceColumnClasses = [
+  "w-[170px]",
+  "w-[170px]",
+  "w-[120px]",
+  "w-[290px]",
+  "w-[260px]",
+  "w-[150px]",
+  "w-[130px]"
 ];
 
 const processRows = [
@@ -70,11 +80,11 @@ export default function DataPage() {
           공공데이터 활용 사실은 유지하되, 공모전 제출 화면에서는 학교 식별정보를 익명화합니다.
         </p>
         <div className="mt-4 overflow-x-auto rounded-lg border border-slate-200">
-          <table className="min-w-[980px] text-left text-sm">
+          <table className="min-w-[1290px] table-fixed text-left text-sm">
             <thead className="bg-slate-50 text-xs font-black text-slate-500">
               <tr>
-                {["데이터명", "출처", "교육 공공데이터 여부", "사용 항목", "활용 목적", "개인정보·식별정보 처리", "메인 지수 반영 여부"].map((header) => (
-                  <th key={header} className="px-4 py-3">{header}</th>
+                {["데이터명", "출처", "교육 공공데이터 여부", "사용 항목", "활용 목적", "개인정보·식별정보 처리", "메인 지수 반영 여부"].map((header, index) => (
+                  <th key={header} className={`px-4 py-3 align-top ${sourceColumnClasses[index]}`}>{header}</th>
                 ))}
               </tr>
             </thead>
@@ -82,7 +92,7 @@ export default function DataPage() {
               {sourceRows.map((row) => (
                 <tr key={row[0]}>
                   {row.map((cell, index) => (
-                    <td key={`${row[0]}-${index}`} className="px-4 py-3 align-top leading-6 text-slate-600">
+                    <td key={`${row[0]}-${index}`} className={`px-4 py-3 align-top leading-6 text-slate-600 ${sourceColumnClasses[index]}`}>
                       {index === 0 ? <span className="font-black text-slate-950">{cell}</span> : cell}
                     </td>
                   ))}
@@ -149,7 +159,7 @@ export default function DataPage() {
               데이터 신뢰도는 학교 역량이 아니라 해석의 확실성이므로 총점에 섞지 않고 별도 배지로 표시합니다.
             </p>
             <p className="rounded-lg bg-slate-50 p-4 text-sm font-bold leading-6 text-slate-700">
-              신뢰도 C는 점수와 관계없이 현장 확인 우선으로 분리합니다.
+              신뢰도 C는 점수와 관계없이 현장 우선확인 필요로 분리합니다.
             </p>
           </div>
         </div>

@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import { AlertTriangle, CheckCircle2, MapPinned, School2 } from "lucide-react";
 import { getLevelLabel, isFieldCheckFirst } from "@/lib/readiness-score";
 import { SchoolRealMap, type RealMapPoint } from "@/components/school-real-map";
@@ -20,7 +20,7 @@ function isFiniteNumber(value: unknown): value is number {
 function getBucket(score: ReadinessScore) {
   if (isFieldCheckFirst(score)) {
     return {
-      label: "현장 확인 우선",
+      label: "현장 우선확인 필요",
       color: "repeating-linear-gradient(135deg, #64748b 0, #64748b 6px, #cbd5e1 6px, #cbd5e1 12px)",
       bg: "bg-slate-100",
       text: "text-slate-700",
@@ -29,7 +29,7 @@ function getBucket(score: ReadinessScore) {
   }
   if (score.score >= 45) {
     return {
-      label: "우선 지원 검토",
+      label: "우선지원 필요",
       color: "#dc2626",
       bg: "bg-red-50",
       text: "text-red-700",
@@ -38,7 +38,7 @@ function getBucket(score: ReadinessScore) {
   }
   if (score.score >= 30) {
     return {
-      label: "보완 검토",
+      label: "지원여부 검토",
       color: "#ea580c",
       bg: "bg-orange-50",
       text: "text-orange-700",
@@ -127,10 +127,10 @@ export function GapMap({
   const maxScore = sorted[0]?.score ?? 0;
   const minScore = sorted[sorted.length - 1]?.score ?? 0;
   const scoreBuckets = [
-    { label: "우선 지원 검토", count: scores.filter((score) => score.level === "attention").length, dot: "bg-red-600" },
-    { label: "보완 검토", count: scores.filter((score) => score.level === "medium").length, dot: "bg-orange-500" },
+    { label: "우선지원 필요", count: scores.filter((score) => score.level === "attention").length, dot: "bg-red-600" },
+    { label: "지원여부 검토", count: scores.filter((score) => score.level === "medium").length, dot: "bg-orange-500" },
     { label: "일반 모니터링", count: scores.filter((score) => score.level === "high").length, dot: "bg-blue-600" },
-    { label: "현장 확인 우선", count: fieldCheckCount, dot: "bg-slate-400" }
+    { label: "현장 우선확인 필요", count: fieldCheckCount, dot: "bg-slate-400" }
   ].filter((bucket) => bucket.count > 0);
   const regionLabel = getRegionLabel();
   const anonymized = isAnonymizeMode();
@@ -155,7 +155,7 @@ export function GapMap({
             className="rounded-lg border border-slate-200 bg-white p-5 shadow-soft hover:border-slate-400"
           >
             <div className="flex items-center justify-between gap-3">
-              <span className="rounded-md bg-red-50 px-2.5 py-1 text-xs font-black text-red-700">우선 지원 검토 TOP {index + 1}</span>
+              <span className="rounded-md bg-red-50 px-2.5 py-1 text-xs font-black text-red-700">우선지원 필요 TOP {index + 1}</span>
               <span className="text-2xl font-black text-slate-950">{item.score}</span>
             </div>
             <h2 className="mt-3 truncate text-lg font-black text-slate-950">{item.schoolName}</h2>
@@ -170,19 +170,18 @@ export function GapMap({
             <div>
               <div className="inline-flex items-center gap-2 rounded-md bg-slate-100 px-3 py-1 text-xs font-bold text-slate-700">
                 <MapPinned className="h-4 w-4" aria-hidden="true" />
-                {anonymized ? "권역화 지도" : `${regionLabel} 실제 지도`}
+                {anonymized ? "권역화 지도(예시)" : `${regionLabel} 실제 지도`}
               </div>
               <h2 className="mt-3 text-2xl font-black text-slate-950">지원 소요 분포</h2>
               <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">
-                점수가 높을수록 공개자료상 지원이 먼저 필요한 신호가 큽니다.
+                점수가 높을수록 AI 교육 지원소요가 큽니다.
               </p>
             </div>
             <div className="grid grid-cols-2 gap-2 text-sm sm:grid-cols-4 lg:min-w-[430px]">
               {[
-                ["학교", scores.length],
-                ["가상 배치", scores.length],
-                ["평균", average(scores)],
-                ["우선 지원", attentionCount]
+                ["학교(가상배치)", scores.length],
+                ["평균점수", average(scores)],
+                ["우선지원 필요", attentionCount]
               ].map(([label, value]) => (
                 <div key={label} className="rounded-md bg-slate-50 px-3 py-2">
                   <p className="text-xs font-bold text-slate-500">{label}</p>
@@ -226,7 +225,7 @@ export function GapMap({
               <div className="mt-5 rounded-md bg-slate-50 p-4">
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="h-4 w-4 text-slate-600" aria-hidden="true" />
-                  <h3 className="text-sm font-black text-slate-950">현장 확인 우선</h3>
+                  <h3 className="text-sm font-black text-slate-950">현장 우선확인 필요</h3>
                 </div>
                 <p className="mt-2 text-xs leading-5 text-slate-600">공개자료가 부족해 점수보다 현장 확인이 먼저 필요한 학교입니다.</p>
                 <div className="mt-3 space-y-2">
@@ -345,7 +344,7 @@ export function GapMap({
                 <span className="font-black text-slate-950">{scenarioRecordCount}건</span>
               </div>
               <p className="mt-2 text-xs font-bold leading-5 text-slate-500">
-                실제 학교 제출자료가 아니라 추가자료 제공 시 가능한 분석 구조 예시이며, 메인 지원 소요 지수에는 반영하지 않습니다.
+                지수 반영은 안되었으나, 실제 구현시 필요 데이터에 대한 가정(예시) 데이터 명 입니다.
               </p>
               <ul className="mt-3 space-y-1 text-sm leading-6 text-slate-600">
                 {scenarioDataSources.map((source) => (
@@ -364,7 +363,7 @@ export function GapMap({
             <div className="space-y-3">
               {[
                 ["지원 소요 산출", scores.length],
-                ["우선 지원 검토", attentionCount],
+                ["우선지원 필요", attentionCount],
                 ["점수 범위", `${minScore}-${maxScore}`]
               ].filter(([label]) => label !== "현장 확인" || fieldCheckCount > 0).map(([label, value]) => (
                 <div key={label} className="flex items-center justify-between text-sm">
@@ -389,3 +388,4 @@ export function GapMap({
     </div>
   );
 }
+

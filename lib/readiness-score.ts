@@ -1,4 +1,4 @@
-import type { ReadinessScore, SchoolProfile } from "./types";
+﻿import type { ReadinessScore, SchoolProfile } from "./types";
 
 export const SUPPORT_PRIORITY_WEIGHTS = {
   educationDemand: 25,
@@ -59,7 +59,7 @@ function getDataReliability(school: SchoolProfile): ReadinessScore["dataReliabil
 
   return {
     grade,
-    label: grade === "A" ? "공개자료 충분" : grade === "B" ? "일부 대체지표 사용" : "현장 확인 우선",
+    label: grade === "A" ? "공개자료 충분" : grade === "B" ? "일부 대체지표 사용" : "현장 우선확인 필요",
     missingCoreCount,
     directFieldCount: directFields,
     proxyFieldCount: proxyFields
@@ -71,9 +71,9 @@ export function isFieldCheckFirst(score: Pick<ReadinessScore, "dataReliability">
 }
 
 export function getLevelLabel(score: number, reliability?: ReadinessScore["dataReliability"]) {
-  if (reliability?.grade === "C") return "현장 확인 우선";
-  if (score >= 45) return "우선 지원 검토";
-  if (score >= 30) return "보완 검토";
+  if (reliability?.grade === "C") return "현장 우선확인 필요";
+  if (score >= 45) return "우선지원 필요";
+  if (score >= 30) return "지원여부 검토";
   return "일반 모니터링";
 }
 
@@ -159,7 +159,7 @@ export function calculateReadinessScore(school: SchoolProfile): ReadinessScore {
     schoolName: school.schoolName,
     score,
     level: getLevel(score, dataReliability),
-    type: dataReliability.grade === "C" ? "현장 확인 우선" : weakFactors[0] ?? "일반 모니터링",
+    type: dataReliability.grade === "C" ? "현장 우선확인 필요" : weakFactors[0] ?? "일반 모니터링",
     signals: [
       `지원 소요 지수: ${score}점`,
       `교육 수요 신호: ${educationDemand}점`,
@@ -177,3 +177,4 @@ export function calculateReadinessScore(school: SchoolProfile): ReadinessScore {
     }
   };
 }
+
