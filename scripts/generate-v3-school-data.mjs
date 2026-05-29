@@ -175,7 +175,7 @@ const scores = publicScores.map((score) => {
 const manifest = {
   generatedAt: new Date().toISOString(),
   targetSido: "서울특별시",
-  targetDistrict: "노원구",
+  targetDistrict: "서울 A권역",
   dataVersion: "v3",
   warnings: [
     "v3는 공공데이터에 학교 제공 추가자료 예시값을 결합한 공모전 목적 산출입니다."

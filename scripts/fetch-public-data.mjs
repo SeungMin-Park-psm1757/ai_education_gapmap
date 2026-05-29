@@ -5,7 +5,7 @@ ensureDir(liveDir);
 
 const warnings = [];
 const targetEduOffice = process.env.TARGET_EDU_OFFICE_CODE || "B10";
-const targetDistrict = process.env.TARGET_DISTRICT || "노원구";
+const targetDistrict = process.env.TARGET_DISTRICT || "서울 A권역";
 const schoolInfoSidoCode = process.env.SCHOOLINFO_SIDO_CODE || "11";
 const schoolInfoSggCode = process.env.SCHOOLINFO_SGG_CODE || "11350";
 const schoolInfoYear = process.env.SCHOOLINFO_PBAN_YEAR || String(new Date().getFullYear() - 1);

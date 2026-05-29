@@ -38,7 +38,7 @@ export default function HomePage() {
               {[
                 ["공개 공공데이터", "NEIS, 학교알리미,\n교육통계, 교육청 공개자료"],
                 ["AI 활용", "취약 요인 라벨링, 유사 학교군 분류,\n지원 유형 매칭"],
-                ["지원소요 산출", "예산·연수·프로그램·자료 보완 검토 순서 제안"]
+                ["지원소요 산출", "예산·연수·프로그램·자료 보완 순서 제안"]
               ].map(([title, text]) => (
                 <div key={title} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
                   <p className="text-xs font-black text-blue-700">{title}</p>

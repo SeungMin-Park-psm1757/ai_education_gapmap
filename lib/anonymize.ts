@@ -5,7 +5,7 @@ export function isAnonymizeMode() {
 }
 
 export function getRegionLabel() {
-  return isAnonymizeMode() ? "서울 A권역" : "노원구";
+  return isAnonymizeMode() ? "서울 A권역" : "서울 A권역";
 }
 
 function sequenceLabel(index: number) {
@@ -67,7 +67,7 @@ export function anonymizeManifest(manifest: DataManifest) {
     targetDistrict: "A권역",
     warnings: manifest.warnings?.map((warning) =>
       warning
-        .replaceAll("노원구", "A권역")
+        .replaceAll("서울 A권역", "A권역")
         .replaceAll("서울특별시", "서울")
         .replaceAll("서울시", "서울")
     )
