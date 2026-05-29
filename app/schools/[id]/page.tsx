@@ -4,8 +4,14 @@ import { AdminActionCards } from "@/components/admin-action-cards";
 import { ReadinessScoreCard } from "@/components/readiness-score-card";
 import { SectionHeader } from "@/components/section-header";
 import { ScoreBreakdown } from "@/components/score-breakdown";
-import { getSchoolById, getScoreBySchoolId } from "@/lib/data-loader";
+import { getSchoolById, getScoreBySchoolId, getSchools } from "@/lib/data-loader";
 import { isAnonymizeMode } from "@/lib/anonymize";
+
+export function generateStaticParams() {
+  return getSchools().map((school) => ({ id: school.id }));
+}
+
+export const dynamicParams = false;
 
 export default function SchoolDetailPage({ params }: { params: { id: string } }) {
   const school = getSchoolById(params.id);

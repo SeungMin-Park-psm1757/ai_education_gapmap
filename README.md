@@ -3,6 +3,7 @@
 교육 공공데이터 AI 활용대회용 제출 대시보드입니다.
 
 - GitHub: <https://github.com/SeungMin-Park-psm1757/ai_education_gapmap>
+- 공개 페이지: <https://seungmin-park-psm1757.github.io/ai_education_gapmap/>
 - 시연 시작 화면: `/`
 - 현재 버전: v3 제출용 대시보드
 - 기본 모드: 공개 공공데이터 기반 1단계 지원 소요 지수
@@ -143,6 +144,23 @@ NEXT_PUBLIC_DEMO_ANONYMIZE=true NEXT_PUBLIC_DATA_VERSION=v3-public NEXT_PUBLIC_I
 
 ```text
 http://localhost:3003/
+```
+
+## GitHub Pages 배포
+
+`main` 브랜치에 푸시하면 GitHub Actions가 정적 사이트를 빌드해 GitHub Pages에 배포합니다.
+
+```text
+https://seungmin-park-psm1757.github.io/ai_education_gapmap/
+```
+
+GitHub Pages 빌드에서는 다음 설정을 사용합니다.
+
+```env
+GITHUB_PAGES=true
+NEXT_PUBLIC_DEMO_ANONYMIZE=true
+NEXT_PUBLIC_DATA_VERSION=v3-public
+NEXT_PUBLIC_INCLUDE_SCENARIO_DATA=false
 ```
 
 ## 검증 명령
