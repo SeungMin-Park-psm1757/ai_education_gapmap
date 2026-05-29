@@ -7,7 +7,7 @@ import { getManifest, getReadinessScores, getSchools } from "@/lib/data-loader";
 const sourceRows = [
   ["NEIS 학교 기본정보", "NEIS 교육정보 개방 포털", "예", "학교명, 학교급, 교육지원청, 주소", "학교 식별 및 기본 분모 구성", "UI 익명화", "예"],
   ["학교알리미 공시자료", "학교알리미", "예", "학생 수, 교원 수, 학급 수, 시설·프로그램 공시", "직접지표와 일부 대체지표 산출", "UI 익명화", "예"],
-  ["공공데이터포털 학교 표준자료", "공공데이터포털", "예", "학교명, 주소 대조, 기관 구분", "공시자료 대조 및 기관 구분", "UI 익명화", "예"],
+  ["공공데이터포털 학교 표준자료(MVP 익명화 조치)", "공공데이터포털", "예", "학교명, 주소 대조, 기관 구분", "공시자료 대조 및 기관 구분", "UI 익명화", "예"],
   ["교육통계·교육청 공개자료", "교육통계·교육청 공개자료", "예", "시설, 정보화, 프로그램 관련 공개자료", "보강 영역 산출 또는 보조", "집계 단위 사용", "예 또는 보조"],
   ["확장진단 시나리오 데이터", "공모전 목적 상 방법론만 제시", "아니오", "AI 디지털교과서(AIDT), 학습관리시스템(LMS), 연수, AI 관련 기기 및 프로그램 접근성", "추가자료 제공 시 가능한 분석 구조 설명", "실명 미사용", "아니오"]
 ];
@@ -59,14 +59,14 @@ export default function DataPage() {
       <SectionHeader
         eyebrow="데이터와 AI 활용"
         title="공개자료 기반 산식과 AI 보조 역할"
-        description="메인 지원 소요 지수는 공개 교육 공공데이터 기반 1단계 진단입니다. 확장진단 시나리오 데이터는 메인 지수에 반영하지 않습니다."
+        description="메인 지원 소요 지수는 공개 교육 공공데이터 기반 1단계 진단입니다. 확장진단 시나리오 데이터는 가정사항으로, 메인 지수에 반영하지 않습니다."
       />
       {!hasData ? <DataRequired /> : null}
 
       <div className="grid gap-4 md:grid-cols-4">
         <MetricCard label="정규화 학교" value={schools.length} />
         <MetricCard label="지원 소요 산출" value={scores.length} />
-        <MetricCard label="확장진단 시나리오" value={scenarioCount} />
+        <MetricCard label="확장진단 시나리오(예시)" value={scenarioCount} />
         <MetricCard label="데이터 경고" value={manifest.warnings?.length ?? 0} />
       </div>
 
@@ -182,17 +182,17 @@ export default function DataPage() {
         </div>
 
         <div className="rounded-lg border border-slate-200 bg-white p-6 shadow-soft">
-          <h2 className="text-xl font-black text-slate-950">확장진단 시나리오</h2>
+          <h2 className="text-xl font-black text-slate-950">확장진단 시나리오(예시)</h2>
           <div className="mt-4 grid gap-3">
             {[
               ["메인 지수 반영", "아니오. 공개 공공데이터 기반 1단계 지수에 섞지 않습니다."],
               ["용도", "학교·교육청 추가자료가 제공될 경우 가능한 분석 구조를 보여주는 예시입니다."],
-              ["항목", "AI 디지털교과서(AIDT) 접속 안정성, 학습관리시스템(LMS) 사용 지속성, 교원 연수 이수, 기기 접근성, AI·SW 프로그램 운영, 외부 AI프로그램 접근성"],
+              ["항목", "AI 디지털교과서(AIDT) 접속 안정성, 학습관리시스템(LMS) 사용 지속성, 교원 연수 이수,\n기기 접근성, AI·SW 프로그램 운영, 외부 AI프로그램 접근성"],
               ["실제 운영", "학교별 엑셀·CSV 또는 교육청 시스템 연계자료가 제공되면 같은 구조로 정밀 진단할 수 있습니다."]
             ].map(([label, text]) => (
               <div key={label} className="rounded-lg bg-slate-50 p-4">
                 <p className="text-sm font-black text-slate-950">{label}</p>
-                <p className="mt-1 text-sm leading-6 text-slate-600">{text}</p>
+                <p className="mt-1 whitespace-pre-line text-sm leading-6 text-slate-600">{text}</p>
               </div>
             ))}
           </div>

@@ -25,7 +25,7 @@ export default function SchoolDetailPage({ params }: { params: { id: string } })
         <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
           <h2 className="text-xl font-black text-slate-950">학교 기본정보</h2>
           {anonymized ? (
-            <p className="mt-2 rounded-md bg-blue-50 px-3 py-2 text-sm font-bold text-blue-800">
+            <p className="mt-2 rounded-md bg-red-50 px-3 py-2 text-sm font-bold text-red-700">
               공모전 제출을 위해 학교명과 위치는 익명화했습니다.
             </p>
           ) : null}

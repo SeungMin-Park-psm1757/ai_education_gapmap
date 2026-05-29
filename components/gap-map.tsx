@@ -139,7 +139,7 @@ export function GapMap({
     : [
         { name: "NEIS 학교 기본정보", count: manifest.counts?.neisSchools ?? schools.length, fields: ["학교명", "학교급", "교육지원청", "주소"] },
         { name: "학교알리미 공시자료", count: manifest.counts?.schoolInfo ?? scores.length, fields: ["학생 수", "교원 수", "학급 수", "시설·프로그램"] },
-        { name: "공공데이터포털 학교 표준자료", count: manifest.counts?.schoolLocationStandard ?? coordinateCount, fields: ["학교명", "주소 대조", "기관 구분"] }
+        { name: "공공데이터포털 학교 표준자료(MVP 익명화 조치)", count: manifest.counts?.schoolLocationStandard ?? coordinateCount, fields: ["학교명", "주소 대조", "기관 구분"] }
       ];
   const publicRecordCount = manifest.counts?.actualPublicRecords ?? publicDataSources.reduce((total, source) => total + source.count, 0);
   const scenarioDataSources = manifest.scenarioDataSources ?? [];
@@ -340,7 +340,7 @@ export function GapMap({
             {scenarioDataSources.length ? (
             <div className="border-b border-slate-100 pb-4">
               <div className="flex items-center justify-between gap-3 text-sm">
-                <span className="font-bold text-slate-600">확장진단 시나리오</span>
+                <span className="font-bold text-slate-600">확장진단 시나리오(예시)</span>
                 <span className="font-black text-slate-950">{scenarioRecordCount}건</span>
               </div>
               <p className="mt-2 text-xs font-bold leading-5 text-slate-500">

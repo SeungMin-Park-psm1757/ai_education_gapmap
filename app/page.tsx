@@ -29,10 +29,10 @@ export default function HomePage() {
               <span className="rounded-md bg-blue-50 px-3 py-1 text-xs font-black text-blue-700">공개자료 기반</span>
               <span className="rounded-md bg-slate-100 px-3 py-1 text-xs font-black text-slate-700">학교명 익명화</span>
               <span className="rounded-md bg-slate-100 px-3 py-1 text-xs font-black text-slate-700">지원 소요 진단</span>
-              <span className="rounded-md bg-slate-100 px-3 py-1 text-xs font-black text-slate-700">확장진단 시나리오 분리</span>
+              <span className="rounded-md bg-slate-100 px-3 py-1 text-xs font-black text-slate-700">확장진단 시나리오(예시) 분리</span>
             </div>
             <p className="mt-4 max-w-4xl text-sm font-bold leading-6 text-slate-700">
-              공개 교육 공공데이터로 학교별 지원 필요 신호를 결합해, 교육청이 예산·연수·프로그램·자료 보완을 어디에 먼저 검토할지 돕습니다.
+              공개 교육 공공데이터로 학교별 AI 교육 지원 신호를 결합해, 교육청이 예산·연수·프로그램·자료 보완을 어디에 먼저 검토할지 돕습니다.
             </p>
             <div className="mt-5 grid gap-3 md:grid-cols-3">
               {[
@@ -53,14 +53,14 @@ export default function HomePage() {
               { label: "분석 학교", value: schools.length, helper: `${regionLabel} 공개자료 기준` },
               { label: "우선지원 필요", value: scores.filter((s) => s.level === "attention").length },
               { label: "지원여부 검토", value: scores.filter((s) => s.level === "medium").length },
-              { label: "현장 우선확인 필요", value: scores.filter((s) => s.level === "field_check").length }
+              { label: "현장 우선확인(데이터 오류 시)", value: scores.filter((s) => s.level === "field_check").length }
             ].map((metric) => (
               <MetricCard key={metric.label} label={metric.label} value={metric.value} helper={metric.helper} />
             ))}
           </div>
 
           <section className="mt-8 rounded-lg border border-slate-200 bg-white p-6 shadow-soft">
-            <h2 className="text-2xl font-black text-slate-950">점수가 높을수록 공개자료상 지원 필요 신호가 큽니다.</h2>
+            <h2 className="text-2xl font-black text-slate-950">점수가 높을수록 AI 교육 지원이 더욱 필요합니다.</h2>
             <div className="mt-5 flex flex-wrap gap-3">
               <Link href="/map" className="rounded-xl bg-slate-950 px-5 py-3 text-sm font-black text-white">
                 AI 교육격차 지도로 확인

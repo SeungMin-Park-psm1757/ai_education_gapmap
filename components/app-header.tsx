@@ -17,7 +17,7 @@ export function AppHeader() {
           </div>
           <div>
             <p className="text-sm font-black text-slate-950">AI 교육격차 지도</p>
-            <p className="text-xs text-slate-500">지원 소요 진단 MVP</p>
+            <p className="text-xs text-slate-500">지원 소요 진단 MVP(최소기능제품)</p>
           </div>
         </Link>
         <nav className="hidden items-center gap-1 md:flex">
